@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://PressStart2P.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Theme stuff/PressStart2P.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Nodes/UI/ItemSlot.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/PlayerInventory.gd" type="Script" id=3]
 [ext_resource path="res://Shader/blur.gdshader" type="Shader" id=4]

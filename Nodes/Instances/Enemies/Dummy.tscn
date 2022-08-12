@@ -5,7 +5,7 @@
 [ext_resource path="res://Nodes/Instances/HurtBox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scripts/Dummy.gd" type="Script" id=4]
 [ext_resource path="res://Nodes/Instances/EnemyStats.tscn" type="PackedScene" id=5]
-[ext_resource path="res://PressStart2P.tres" type="DynamicFont" id=9]
+[ext_resource path="res://Theme stuff/PressStart2P.tres" type="DynamicFont" id=9]
 [ext_resource path="res://Shader/flash_shader.gdshader" type="Shader" id=11]
 
 [sub_resource type="ShaderMaterial" id=1]

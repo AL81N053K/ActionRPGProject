@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Preload/debug_interface.tscn" type="PackedScene" id=2]
@@ -8,16 +8,8 @@
 [ext_resource path="res://Shader/HQ4X.gdshader" type="Shader" id=6]
 [ext_resource path="res://Theme stuff/main_theme.tres" type="Theme" id=7]
 [ext_resource path="res://Sprites/animated_particles/smal_animated_star.tres" type="Texture" id=8]
-[ext_resource path="res://icon_v1_big.png" type="Texture" id=9]
+[ext_resource path="res://Textures/icons/icon_v1_big.png" type="Texture" id=9]
 [ext_resource path="res://Nodes/UI/MainMenuPanel.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Textures/runes/rune_fire.png" type="Texture" id=11]
-[ext_resource path="res://Textures/runes/rune_energy.png" type="Texture" id=12]
-[ext_resource path="res://Textures/runes/rune_luck.png" type="Texture" id=13]
-[ext_resource path="res://Textures/runes/rune_power.png" type="Texture" id=14]
-[ext_resource path="res://Textures/runes/rune_time.png" type="Texture" id=15]
-[ext_resource path="res://Textures/runes/rune_life.png" type="Texture" id=16]
-[ext_resource path="res://Textures/runes/rune_ice.png" type="Texture" id=17]
-[ext_resource path="res://Textures/runes/rune_poison.png" type="Texture" id=18]
 
 [sub_resource type="ShaderMaterial" id=4]
 shader = ExtResource( 6 )
@@ -119,102 +111,6 @@ anims/RESET = SubResource( 2 )
 anims/main = SubResource( 3 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Icon" type="MarginContainer" parent="CanvasLayer"]
-visible = false
-margin_left = 20.0
-margin_top = 20.0
-margin_right = 120.0
-margin_bottom = 120.0
-
-[node name="Runes" type="GridContainer" parent="CanvasLayer/Icon"]
-margin_right = 141.0
-margin_bottom = 141.0
-custom_constants/vseparation = 3
-custom_constants/hseparation = 3
-columns = 3
-
-[node name="Rune1" type="TextureRect" parent="CanvasLayer/Icon/Runes"]
-margin_right = 45.0
-margin_bottom = 45.0
-rect_min_size = Vector2( 45, 45 )
-texture = ExtResource( 12 )
-stretch_mode = 4
-
-[node name="Rune2" type="TextureRect" parent="CanvasLayer/Icon/Runes"]
-margin_left = 48.0
-margin_right = 93.0
-margin_bottom = 45.0
-rect_min_size = Vector2( 45, 45 )
-rect_pivot_offset = Vector2( 23, 23 )
-texture = ExtResource( 14 )
-stretch_mode = 4
-
-[node name="Rune3" type="TextureRect" parent="CanvasLayer/Icon/Runes"]
-margin_left = 96.0
-margin_right = 141.0
-margin_bottom = 45.0
-rect_min_size = Vector2( 45, 45 )
-rect_pivot_offset = Vector2( 23, 23 )
-texture = ExtResource( 18 )
-stretch_mode = 4
-
-[node name="Rune4" type="TextureRect" parent="CanvasLayer/Icon/Runes"]
-margin_top = 48.0
-margin_right = 45.0
-margin_bottom = 93.0
-rect_min_size = Vector2( 45, 45 )
-rect_pivot_offset = Vector2( 23, 23 )
-texture = ExtResource( 15 )
-stretch_mode = 4
-
-[node name="Rune5" type="TextureRect" parent="CanvasLayer/Icon/Runes"]
-margin_left = 48.0
-margin_top = 48.0
-margin_right = 93.0
-margin_bottom = 93.0
-rect_min_size = Vector2( 45, 45 )
-rect_pivot_offset = Vector2( 23, 23 )
-stretch_mode = 4
-
-[node name="Rune6" type="TextureRect" parent="CanvasLayer/Icon/Runes"]
-margin_left = 96.0
-margin_top = 48.0
-margin_right = 141.0
-margin_bottom = 93.0
-rect_min_size = Vector2( 45, 45 )
-rect_pivot_offset = Vector2( 23, 23 )
-texture = ExtResource( 17 )
-stretch_mode = 4
-
-[node name="Rune7" type="TextureRect" parent="CanvasLayer/Icon/Runes"]
-margin_top = 96.0
-margin_right = 45.0
-margin_bottom = 141.0
-rect_min_size = Vector2( 45, 45 )
-rect_pivot_offset = Vector2( 23, 23 )
-texture = ExtResource( 16 )
-stretch_mode = 4
-
-[node name="Rune8" type="TextureRect" parent="CanvasLayer/Icon/Runes"]
-margin_left = 48.0
-margin_top = 96.0
-margin_right = 93.0
-margin_bottom = 141.0
-rect_min_size = Vector2( 45, 45 )
-rect_pivot_offset = Vector2( 23, 23 )
-texture = ExtResource( 13 )
-stretch_mode = 4
-
-[node name="Rune9" type="TextureRect" parent="CanvasLayer/Icon/Runes"]
-margin_left = 96.0
-margin_top = 96.0
-margin_right = 141.0
-margin_bottom = 141.0
-rect_min_size = Vector2( 45, 45 )
-rect_pivot_offset = Vector2( 23, 23 )
-texture = ExtResource( 11 )
-stretch_mode = 4
 
 [node name="TempIcon" type="TextureRect" parent="CanvasLayer"]
 margin_left = 20.0
