@@ -1,0 +1,10 @@
+{
+    "id": "stone",
+    "attributes": {
+        "name": "Stone",
+        "description": "Material good for foundation for a house or special utilities like furnaces.",
+        "maxStackSize": 999,
+        "type": "material",
+        "rarity": "COMMON"
+    }
+}

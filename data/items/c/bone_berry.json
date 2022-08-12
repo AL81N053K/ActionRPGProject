@@ -1,0 +1,15 @@
+{
+	"id": "bone_berry",
+	"attributes": {
+		"name": "Boneberry",
+		"description": "It's not actually made out of bones but it's white and hard to even bite into it. Eating them makes you feel bit healthy and light. Found in bone forest and rarely in normal forst at night.",
+		"maxStackSize": 99,
+		"type": "consumable",
+		"rarity": "UNCOMMON",
+		"on_consume": {
+			"heal": 15,
+			"mana": 0,
+			"stamina": 10
+		}
+	}
+}

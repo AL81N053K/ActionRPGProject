@@ -1,0 +1,15 @@
+{
+	"id": "blue_berry",
+	"attributes": {
+		"name": "Blueberry",
+		"description": "Tasty blue berries. Eating them makes you feel bit magicall. Found in forest.",
+		"maxStackSize": 99,
+		"type": "consumable",
+		"rarity": "COMMON",
+		"on_consume": {
+			"heal": 0,
+			"mana": 8,
+			"stamina": 0
+		}
+	}
+}

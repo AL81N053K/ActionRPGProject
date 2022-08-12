@@ -1,0 +1,10 @@
+{
+    "id": "gold_key",
+    "attributes": {
+        "name": "Gold Key",
+        "description": "Used to open special doors.",
+        "maxStackSize": 1,
+        "type": "key",
+        "rarity": "QUEST"
+    }
+}

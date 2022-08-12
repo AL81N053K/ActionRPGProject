@@ -1,0 +1,15 @@
+{
+	"id": "apple",
+	"attributes": {
+		"name": "Apple",
+		"description": "Juicy apple stragith from a tree. Found on trees.",
+		"maxStackSize": 99,
+		"type": "consumable",
+		"rarity": "COMMON",
+		"on_consume": {
+			"heal": 10,
+			"mana": 1,
+			"stamina": 0
+		}
+	}
+}

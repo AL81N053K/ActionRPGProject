@@ -1,0 +1,12 @@
+{
+    "id": "leather_boots",
+    "attributes": {
+        "name": "Leather Boots",
+        "description": "Bit tight but they provide some protection",
+        "maxStackSize": 1,
+        "type": "armor",
+        "rarity": "COMMON",
+        "defence": 3,
+        "placement": "feet"
+    }
+}

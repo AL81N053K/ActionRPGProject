@@ -1,0 +1,15 @@
+{
+    "id": "xp_bag",
+    "attributes": {
+        "name": "XP Bag",
+		"description": "A bag filled with experience orbs.",
+        "maxStackSize": 99,
+        "type": "xp_gain",
+		"rarity": "RARE",
+		"on_consume": {
+			"min_xp": 300,
+			"max_xp": 1000,
+			"insta_level_up": false
+		}
+	}
+}

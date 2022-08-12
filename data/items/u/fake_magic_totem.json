@@ -1,0 +1,18 @@
+{
+	"id": "fake_magic_totem",
+	"attributes": {
+		"name": "Not-Magical Totem",
+		"description": "Revives you after defeat, heals only 1 health.",
+		"maxStackSize": 5,
+		"type": "utility",
+		"rarity": "UNCOMMON",
+		"utility": {
+			"give_effect": false,
+			"revive": true,
+			"effect": {
+				"type": "add",
+				"amount": 1
+			}
+		}
+	}
+}

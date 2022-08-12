@@ -1,0 +1,15 @@
+{
+	"id": "coocked_beef",
+	"attributes": {
+		"name": "Coocked Beef",
+		"description": "Coocked meat. Tastes quite good but it feels there's something missing.",
+		"maxStackSize": 99,
+		"type": "consumable",
+		"rarity": "UNCOMMON",
+		"on_consume": {
+			"heal": 25,
+			"mana": 0,
+			"stamina": 0
+		}
+	}
+}

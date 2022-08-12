@@ -1,0 +1,10 @@
+{
+    "id": "leather",
+    "attributes": {
+        "name": "Leather",
+        "description": "Leather is mainly used as a material for armor, furniture and in some cases as decoration.",
+        "maxStackSize": 999,
+        "type": "material",
+        "rarity": "COMMON"
+    }
+}

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Ludum Dare 32 - Track 2.wav-e551d815a007d95b1fa9012b319269ee.sample"
+
+[deps]
+
+source_file="res://Audio/Abstraction - Ludum Dare Loops/Ludum Dare 32 - Track 2.wav"
+dest_files=[ "res://.import/Ludum Dare 32 - Track 2.wav-e551d815a007d95b1fa9012b319269ee.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

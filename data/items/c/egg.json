@@ -1,0 +1,15 @@
+{
+	"id": "egg",
+	"attributes": {
+		"name": "Egg",
+		"description": "Raw egg from some bird. Found in bird nests, roosters and shops.",
+		"maxStackSize": 99,
+		"type": "consumable",
+		"rarity": "COMMON",
+		"on_consume": {
+			"heal": 3,
+			"mana": 0,
+			"stamina": 0
+		}
+	}
+}

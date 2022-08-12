@@ -1,0 +1,14 @@
+{
+	"id": "kitchen_knife",
+	"attributes": {
+		"name": "Kithen Knife",
+		"description": "Normal kitchen knife. Sharp but mainly for greens.",
+		"maxStackSize": 1,
+		"type": "melee_weapon",
+		"rarity": "COMMON",
+		"meleeDamage": {
+			"min": 3,
+			"max": 5
+		}
+	}
+}

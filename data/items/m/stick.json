@@ -1,0 +1,9 @@
+{
+    "id": "stick",
+    "attributes": {
+        "name": "Stick",
+        "maxStackSize": 999,
+        "type": "material",
+        "rarity": "COMMON"
+    }
+}

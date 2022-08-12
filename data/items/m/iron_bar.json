@@ -1,0 +1,10 @@
+{
+    "id": "iron_bar",
+    "attributes": {
+        "name": "Iron Bar",
+        "description": "Shiny iron bar. Strong material to build differnt kinds of weapons.",
+        "maxStackSize": 999,
+        "type": "material",
+        "rarity": "UNCOMMON"
+    }
+}

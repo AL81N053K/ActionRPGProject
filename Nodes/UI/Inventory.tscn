@@ -1,0 +1,328 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://PressStart2P.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Nodes/UI/ItemSlot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/PlayerInventory.gd" type="Script" id=3]
+[ext_resource path="res://Shader/blur.gdshader" type="Shader" id=4]
+[ext_resource path="res://Audio/menumove.wav" type="AudioStream" id=5]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 4 )
+shader_param/amount = null
+
+[node name="Inventory" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+bus = "SFX"
+
+[node name="Blur" type="ColorRect" parent="."]
+material = SubResource( 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="StatsLabel" type="Label" parent="."]
+margin_left = 15.0
+margin_top = 15.0
+custom_fonts/font = ExtResource( 1 )
+text = "STATS"
+
+[node name="TabContainer" type="TabContainer" parent="."]
+anchor_top = 0.3
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_right = -15.0
+margin_bottom = -10.0
+tab_align = 0
+
+[node name="Inventory" type="Tabs" parent="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 11.0
+scrolling_enabled = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Inventory"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+size_flags_horizontal = 2
+alignment = 1
+
+[node name="Container" type="GridContainer" parent="TabContainer/Inventory/VBoxContainer"]
+margin_top = 10.0
+margin_right = 600.0
+margin_bottom = 210.0
+custom_constants/hseparation = 15
+columns = 2
+
+[node name="Slots" type="GridContainer" parent="TabContainer/Inventory/VBoxContainer/Container"]
+margin_right = 242.0
+margin_bottom = 200.0
+custom_constants/vseparation = 10
+custom_constants/hseparation = 10
+columns = 6
+
+[node name="Slot1" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+
+[node name="Slot2" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_left = 42.0
+margin_right = 74.0
+
+[node name="Slot3" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_left = 84.0
+margin_right = 116.0
+
+[node name="Slot4" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_left = 126.0
+margin_right = 158.0
+
+[node name="Slot5" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_left = 168.0
+margin_right = 200.0
+
+[node name="Slot6" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_left = 210.0
+margin_right = 242.0
+
+[node name="Slot7" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_top = 42.0
+margin_bottom = 74.0
+
+[node name="Slot8" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_left = 42.0
+margin_top = 42.0
+margin_right = 74.0
+margin_bottom = 74.0
+
+[node name="Slot9" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_left = 84.0
+margin_top = 42.0
+margin_right = 116.0
+margin_bottom = 74.0
+
+[node name="Slot10" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_left = 126.0
+margin_top = 42.0
+margin_right = 158.0
+margin_bottom = 74.0
+
+[node name="Slot11" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_left = 168.0
+margin_top = 42.0
+margin_right = 200.0
+margin_bottom = 74.0
+
+[node name="Slot12" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_left = 210.0
+margin_top = 42.0
+margin_right = 242.0
+margin_bottom = 74.0
+
+[node name="Slot13" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_top = 84.0
+margin_bottom = 116.0
+
+[node name="Slot14" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_left = 42.0
+margin_top = 84.0
+margin_right = 74.0
+margin_bottom = 116.0
+
+[node name="Slot15" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_left = 84.0
+margin_top = 84.0
+margin_right = 116.0
+margin_bottom = 116.0
+
+[node name="Slot16" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_left = 126.0
+margin_top = 84.0
+margin_right = 158.0
+margin_bottom = 116.0
+
+[node name="Slot17" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_left = 168.0
+margin_top = 84.0
+margin_right = 200.0
+margin_bottom = 116.0
+
+[node name="Slot18" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_left = 210.0
+margin_top = 84.0
+margin_right = 242.0
+margin_bottom = 116.0
+
+[node name="Slot19" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_top = 126.0
+margin_bottom = 158.0
+
+[node name="Slot20" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_left = 42.0
+margin_top = 126.0
+margin_right = 74.0
+margin_bottom = 158.0
+
+[node name="Slot21" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_left = 84.0
+margin_top = 126.0
+margin_right = 116.0
+margin_bottom = 158.0
+
+[node name="Slot22" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_left = 126.0
+margin_top = 126.0
+margin_right = 158.0
+margin_bottom = 158.0
+
+[node name="Slot23" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_left = 168.0
+margin_top = 126.0
+margin_right = 200.0
+margin_bottom = 158.0
+
+[node name="Slot24" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_left = 210.0
+margin_top = 126.0
+margin_right = 242.0
+margin_bottom = 158.0
+
+[node name="Slot25" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_top = 168.0
+margin_bottom = 200.0
+
+[node name="Slot26" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_left = 42.0
+margin_top = 168.0
+margin_right = 74.0
+margin_bottom = 200.0
+
+[node name="Slot27" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_left = 84.0
+margin_top = 168.0
+margin_right = 116.0
+margin_bottom = 200.0
+
+[node name="Slot28" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_left = 126.0
+margin_top = 168.0
+margin_right = 158.0
+margin_bottom = 200.0
+
+[node name="Slot29" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_left = 168.0
+margin_top = 168.0
+margin_right = 200.0
+margin_bottom = 200.0
+
+[node name="Slot30" parent="TabContainer/Inventory/VBoxContainer/Container/Slots" instance=ExtResource( 2 )]
+margin_left = 210.0
+margin_top = 168.0
+margin_right = 242.0
+margin_bottom = 200.0
+
+[node name="SelectedItem" type="Label" parent="TabContainer/Inventory/VBoxContainer/Container"]
+margin_left = 257.0
+margin_right = 557.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 300, 200 )
+custom_fonts/font = ExtResource( 1 )
+text = "Item"
+autowrap = true
+
+[node name="Armor" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 11.0
+scrolling_enabled = false
+
+[node name="VBoxContainer" type="HBoxContainer" parent="TabContainer/Armor"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+size_flags_horizontal = 2
+alignment = 1
+
+[node name="Slots" type="GridContainer" parent="TabContainer/Armor/VBoxContainer"]
+margin_left = 101.0
+margin_top = 10.0
+margin_right = 191.0
+margin_bottom = 210.0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+custom_constants/vseparation = 10
+custom_constants/hseparation = 10
+columns = 2
+
+[node name="Slot1" parent="TabContainer/Armor/VBoxContainer/Slots" instance=ExtResource( 2 )]
+
+[node name="Label1" type="Label" parent="TabContainer/Armor/VBoxContainer/Slots"]
+margin_left = 42.0
+margin_top = 12.0
+margin_right = 90.0
+margin_bottom = 20.0
+text = "Head"
+
+[node name="Slot2" parent="TabContainer/Armor/VBoxContainer/Slots" instance=ExtResource( 2 )]
+margin_top = 42.0
+margin_bottom = 74.0
+
+[node name="Label2" type="Label" parent="TabContainer/Armor/VBoxContainer/Slots"]
+margin_left = 42.0
+margin_top = 54.0
+margin_right = 90.0
+margin_bottom = 62.0
+text = "Chest"
+
+[node name="Slot3" parent="TabContainer/Armor/VBoxContainer/Slots" instance=ExtResource( 2 )]
+margin_top = 84.0
+margin_bottom = 116.0
+
+[node name="Label3" type="Label" parent="TabContainer/Armor/VBoxContainer/Slots"]
+margin_left = 42.0
+margin_top = 96.0
+margin_right = 90.0
+margin_bottom = 104.0
+text = "Legs"
+
+[node name="Slot4" parent="TabContainer/Armor/VBoxContainer/Slots" instance=ExtResource( 2 )]
+margin_top = 126.0
+margin_bottom = 158.0
+
+[node name="Label4" type="Label" parent="TabContainer/Armor/VBoxContainer/Slots"]
+margin_left = 42.0
+margin_top = 138.0
+margin_right = 90.0
+margin_bottom = 146.0
+text = "Feet"
+
+[node name="Slot5" parent="TabContainer/Armor/VBoxContainer/Slots" instance=ExtResource( 2 )]
+margin_top = 168.0
+margin_bottom = 200.0
+
+[node name="Label5" type="Label" parent="TabContainer/Armor/VBoxContainer/Slots"]
+margin_left = 42.0
+margin_top = 180.0
+margin_right = 90.0
+margin_bottom = 188.0
+text = "Weapon"
+
+[node name="SelectedItem" type="Label" parent="TabContainer/Armor/VBoxContainer"]
+margin_left = 199.0
+margin_top = 10.0
+margin_right = 499.0
+margin_bottom = 210.0
+rect_min_size = Vector2( 300, 200 )
+custom_fonts/font = ExtResource( 1 )
+text = "Item"
+autowrap = true

@@ -1,0 +1,14 @@
+{
+	"id": "bat",
+	"attributes": {
+		"name": "Bat",
+		"description": "Wooden bat. It has a nail going through the head of it.",
+		"maxStackSize": 1,
+		"type": "melee_weapon",
+		"rarity": "COMMON",
+		"meleeDamage": {
+			"min": 1,
+			"max": 8
+		}
+	}
+}

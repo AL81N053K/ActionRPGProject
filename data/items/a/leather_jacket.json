@@ -1,0 +1,12 @@
+{
+    "id": "leather_jacket",
+    "attributes": {
+        "name": "Leather Jacket",
+        "description": "Given from the old man that helped you. It feels it has been through a long history.",
+        "maxStackSize": 1,
+        "type": "armor",
+        "rarity": "COMMON",
+        "defence": 2,
+        "placement": "chest"
+    }
+}

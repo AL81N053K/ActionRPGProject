@@ -1,0 +1,15 @@
+{
+	"id": "coconut",
+	"attributes": {
+		"name": "Coconut",
+		"description": "A coconut nut is a giant nut, if you eat too much you'll get very far. The coconut nut is a big big nut, but this decious nut is not a nut. It's a coco fruit, from the coco tree, from the coco palm family.",
+		"maxStackSize": 99,
+		"type": "consumable",
+		"rarity": "UNCOMMON",
+		"on_consume": {
+			"heal": 20,
+			"mana": 5,
+			"stamina": 15
+		}
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"id": "rotten_meat",
+	"attributes": {
+		"name": "Rotten Meat",
+		"description": "Rotten meat. ...Why would you ever want to eat this? You can get food poisoning!",
+		"maxStackSize": 99,
+		"type": "consumable",
+		"rarity": "COMMON",
+		"on_consume": {
+			"heal": 1,
+			"mana": 1,
+			"stamina": 0
+		}
+	}
+}

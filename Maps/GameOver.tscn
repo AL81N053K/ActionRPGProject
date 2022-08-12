@@ -1,0 +1,194 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Scripts/GameOver.gd" type="Script" id=1]
+[ext_resource path="res://Preload/debug_interface.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Nodes/UI/SceneTransitionRect.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Backgrounds/gameover-background.png" type="Texture" id=5]
+[ext_resource path="res://Shader/HQ4X.gdshader" type="Shader" id=6]
+[ext_resource path="res://Theme stuff/main_theme.tres" type="Theme" id=7]
+[ext_resource path="res://Sprites/animated_particles/smal_animated_star.tres" type="Texture" id=8]
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = ExtResource( 6 )
+shader_param/THRESHOLD = 0.1
+shader_param/AA_SCALE = 10.0
+
+[sub_resource type="Curve" id=5]
+min_value = -360.0
+max_value = 360.0
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.151515, -108.818 ), 0.0, 0.0, 0, 0, Vector2( 0.367965, 120.273 ), 0.0, 0.0, 0, 0, Vector2( 0.627706, -49.9091 ), 1628.31, 1628.31, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Curve" id=6]
+_data = [ Vector2( 0, 0.0136364 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.9875 ), 3.24546, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=7]
+offsets = PoolRealArray( 0, 0.117424, 0.534091, 0.814394, 1 )
+colors = PoolColorArray( 0, 0, 0, 0, 0.457031, 0.177635, 0.177635, 1, 0.810547, 0.120316, 0.120316, 1, 0.714844, 0.147995, 0.147995, 1, 1, 1, 1, 0 )
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Background:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -450, -255 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Background:rect_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1500, 850 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Background:rect_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "main"
+length = 100.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Background:rect_scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 50, 100 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.5 ), Vector2( 1, 1 ) ]
+}
+
+[node name="GameOver" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Background" type="NinePatchRect" parent="."]
+material = SubResource( 4 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -450.0
+margin_top = -255.0
+margin_right = 1050.0
+margin_bottom = 595.0
+rect_min_size = Vector2( 1500, 850 )
+rect_pivot_offset = Vector2( 750, 425 )
+texture = ExtResource( 5 )
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+modulate = Color( 1.9, 1, 0.8, 1 )
+position = Vector2( 300, 169 )
+amount = 600
+lifetime = 5.0
+lifetime_randomness = 1.0
+texture = ExtResource( 8 )
+emission_shape = 2
+emission_rect_extents = Vector2( 400, 300 )
+spread = 10.0
+gravity = Vector2( 0, 5 )
+initial_velocity = 10.0
+initial_velocity_random = 0.35
+angular_velocity = 45.0
+angular_velocity_random = 1.0
+angular_velocity_curve = SubResource( 5 )
+linear_accel = 7.0
+linear_accel_random = 0.4
+radial_accel = 8.0
+radial_accel_random = 1.0
+tangential_accel = 1.0
+tangential_accel_random = 0.1
+damping = 5.0
+damping_random = 1.0
+angle = 40.0
+angle_random = 1.0
+scale_amount = 0.8
+scale_amount_random = 0.4
+scale_amount_curve = SubResource( 6 )
+color_ramp = SubResource( 7 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "main"
+anims/RESET = SubResource( 2 )
+anims/main = SubResource( 3 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchor_left = 0.083
+anchor_top = 0.089
+anchor_right = 0.917
+anchor_bottom = 0.284
+margin_left = 0.199997
+margin_top = -0.0820007
+margin_right = -0.200012
+margin_bottom = -0.0820007
+text = "GAME OVER"
+align = 1
+valign = 1
+
+[node name="debug" parent="CanvasLayer" instance=ExtResource( 2 )]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -100.0
+margin_top = 50.0
+margin_right = 100.0
+margin_bottom = -50.0
+alignment = 2
+
+[node name="SaveAndContinue" type="Button" parent="CanvasLayer/VBoxContainer"]
+margin_top = 202.0
+margin_right = 224.0
+margin_bottom = 216.0
+focus_neighbour_top = NodePath("../SaveAndQuit")
+theme = ExtResource( 7 )
+text = "Save and Continue"
+
+[node name="SaveAndQuit" type="Button" parent="CanvasLayer/VBoxContainer"]
+margin_top = 224.0
+margin_right = 224.0
+margin_bottom = 238.0
+focus_neighbour_bottom = NodePath("../SaveAndContinue")
+theme = ExtResource( 7 )
+text = "Save and Return to Main Menu"
+
+[node name="JustQuit" type="Button" parent="CanvasLayer/VBoxContainer"]
+margin_top = 246.0
+margin_right = 224.0
+margin_bottom = 260.0
+focus_neighbour_bottom = NodePath("../SaveAndContinue")
+theme = ExtResource( 7 )
+text = "Return to Main Menu"
+
+[node name="SceneTransitionRect" parent="CanvasLayer" instance=ExtResource( 3 )]
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/SaveAndContinue" to="." method="_on_SaveAndContinue_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/SaveAndQuit" to="." method="_on_SaveAndQuit_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/JustQuit" to="." method="_on_JustQuit_pressed"]

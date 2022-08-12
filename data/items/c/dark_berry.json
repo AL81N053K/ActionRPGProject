@@ -1,0 +1,15 @@
+{
+	"id": "dark_berry",
+	"attributes": {
+		"name": "Darkberry",
+		"description": "Tastes like sand and bitter. Eating them makes you feel bit healthy and energized. Found in forest at night.",
+		"maxStackSize": 99,
+		"type": "consumable",
+		"rarity": "COMMON",
+		"on_consume": {
+			"heal": 8,
+			"mana": 0,
+			"stamina": 20
+		}
+	}
+}

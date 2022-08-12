@@ -1,0 +1,15 @@
+{
+	"id": "burger",
+	"attributes": {
+		"name": "Burger",
+		"description": "Ordinary burger. Taste like from typical fast-food.",
+		"maxStackSize": 99,
+		"type": "consumable",
+		"rarity": "UNCOMMON",
+		"on_consume": {
+			"heal": 35,
+			"mana": 0,
+			"stamina": 0
+		}
+	}
+}

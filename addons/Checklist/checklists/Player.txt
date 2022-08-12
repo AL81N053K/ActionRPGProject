@@ -1,0 +1,17 @@
+L|Name: Cribeil Clugo
+L|Specie: Hyena
+L|Gender: Male
+L|Base stats:
+I|1
+L|HP 20
+L|MP 10
+L|DMG 4
+L|DEF 0
+L|SPD 110
+L|LUCK 10
+L|
+Create proper leveling up system
+Implement Skills
+Create proper inventory
+Implement Traits
+O|Traits|res://traits.txt

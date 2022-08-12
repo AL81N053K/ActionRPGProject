@@ -1,0 +1,15 @@
+Iron body (DEF +10%) [Blocks: Fragile body] {-8}
+Fragile body (DEF -10%) [Blocks: Iron body] {+3}
+Clumsy (Have a chance to miss) {+3}
+Strongman (STR +10%) {-8}
+Runner (SPD +20%, MSPD +20%) {-3}
+Sneaky (Harder to be detected) {-5}
+Furious (Being on 20% of HP gives a +50% DMG boost) {-3}
+Fat (AGL/SPD -20%, +5% HP) {+2}
+Blind to money (Prices are higher) [Blocks: Charming] {0}
+Energized (Stamina regenerates faster) [Blocks: Lazy] {-3}
+Lazy (Stamina regenerates slower) [Blocks: Energized] {+1}
+Gluton (Food items will regenerate more HP) {-5}
+Charming (Chance to get lower prices) [Blocks: Blind to Money] {-3}
+Anemia (After getting hit, character for 10 seconds bleeds, -5% MSPD) {+5}
+Vegetarian (Can only eat food without meat) {0}

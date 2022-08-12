@@ -1,0 +1,15 @@
+{
+	"id": "medkit_1",
+	"attributes": {
+		"maxStackSize": 16,
+		"name": "Small Med Kit",
+		"description": "It has all nessesary items to patch a wound in a small package.",
+		"type": "consumable",
+		"rarity": "COMMON",
+		"on_consume": {
+			"heal": 20,
+			"mana": 10,
+			"stamina": 0
+		}
+	}
+}

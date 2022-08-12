@@ -1,0 +1,18 @@
+{
+	"id": "magic_totem",
+	"attributes": {
+		"name": "Magical Totem",
+		"description": "Revives you after defeat, heals 33% of your health.",
+		"maxStackSize": 5,
+		"type": "utility",
+		"rarity": "RARE",
+		"utility": {
+			"give_effect": false,
+			"revive": true,
+			"effect": {
+				"type": "procent",
+				"amount": 0.33
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"id": "nuke",
+	"attributes": {
+		"name": "MINI NUKE LAUNCHER",
+		"description": "...How did you get this weapon?",
+		"maxStackSize": 1,
+		"type": "melee_weapon",
+		"rarity": "PLATINUM",
+		"meleeDamage": {
+			"min": 999999,
+			"max": 999999999
+		}
+	}
+}

@@ -1,0 +1,15 @@
+{
+  "id": "medkit_2",
+	"attributes": {
+    	"maxStackSize": 16,
+		"name": "Emergency Med Kit",
+		"description": "Good for emergency. Has most of the items you can use for patch wound or heal from most of poisons.",
+		"type": "consumable",
+		"rarity": "UNCOMMON",
+		"on_consume": {
+			"heal": 25,
+			"mana": 15,
+			"stamina": 0
+		}
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"id": "beef",
+	"attributes": {
+		"name": "Beef",
+		"description": "Raw meat from cows. Tastes better when cooked.",
+		"maxStackSize": 99,
+		"type": "consumable",
+		"rarity": "COMMON",
+		"on_consume": {
+			"heal": 6,
+			"mana": 0,
+			"stamina": 0
+		}
+	}
+}

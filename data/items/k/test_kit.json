@@ -1,0 +1,27 @@
+{
+    "id": "test_kit",
+    "attributes": {
+        "name": "Test Kit",
+        "description": "Test Kit - Made for testing.",
+        "maxStackSize": 1,
+        "type": "kit",
+        "rarity": "RARE",
+        "kit": [
+            {
+                "id": "rare_candy",
+				"name": "Rare Candy",
+                "quantity": 3 
+            },
+            {
+                "id": "red_berry",
+				"name": "Redberry",
+                "quantity": 10
+            },
+            {
+                "id": "blue_berry",
+				"name": "Blueberry",
+                "quantity": 10
+            }
+        ]
+    }
+}

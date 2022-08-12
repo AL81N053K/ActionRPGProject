@@ -1,0 +1,675 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://addons/project_map/project_map.gd" type="Script" id=1]
+[ext_resource path="res://addons/project_map/pm_group_node.gd" type="Script" id=2]
+[ext_resource path="res://addons/project_map/pm_file_node.gd" type="Script" id=3]
+[ext_resource path="res://addons/project_map/pm_group_node.tscn" type="PackedScene" id=4]
+[ext_resource path="res://addons/project_map/pm_file_node.tscn" type="PackedScene" id=5]
+[ext_resource path="res://addons/project_map/node_selected.stylebox" type="StyleBox" id=6]
+[ext_resource path="res://addons/project_map/group.stylebox" type="StyleBox" id=7]
+[ext_resource path="res://addons/project_map/group_selected.stylebox" type="StyleBox" id=8]
+[ext_resource path="res://addons/project_map/node.stylebox" type="StyleBox" id=9]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.2, 0.231373, 0.309804, 1 )
+
+[node name="ProjectMap" type="GraphEdit"]
+visible = false
+margin_right = 1257.0
+margin_bottom = 671.0
+rect_min_size = Vector2( 500, 500 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/bg = SubResource( 1 )
+scroll_offset = Vector2( -340.928, -152.843 )
+snap_distance = 32
+zoom = 0.8
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="GroupNode2" type="GraphNode" parent="." instance=ExtResource( 4 )]
+margin_left = 596.928
+margin_top = 101.643
+margin_right = 788.928
+margin_bottom = 517.643
+rect_min_size = Vector2( 192, 416 )
+rect_scale = Vector2( 0.8, 0.8 )
+mouse_filter = 1
+custom_styles/commentfocus = ExtResource( 8 )
+custom_styles/comment = ExtResource( 7 )
+offset = Vector2( 320, -64 )
+resizable = true
+comment = true
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+group_name = "Debug Levels"
+
+[node name="GroupNode" type="GraphNode" parent="." instance=ExtResource( 4 )]
+margin_left = 443.328
+margin_top = 101.643
+margin_right = 603.328
+margin_bottom = 293.643
+rect_min_size = Vector2( 160, 192 )
+rect_scale = Vector2( 0.8, 0.8 )
+mouse_filter = 1
+custom_styles/commentfocus = ExtResource( 8 )
+custom_styles/comment = ExtResource( 7 )
+offset = Vector2( 128, -64 )
+resizable = true
+comment = true
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+group_name = "Menus"
+
+[node name="GroupNode3" type="GraphNode" parent="." instance=ExtResource( 4 )]
+margin_left = 136.128
+margin_top = 101.643
+margin_right = 488.128
+margin_bottom = 645.643
+rect_min_size = Vector2( 352, 544 )
+rect_scale = Vector2( 0.8, 0.8 )
+mouse_filter = 1
+custom_styles/commentfocus = ExtResource( 8 )
+custom_styles/comment = ExtResource( 7 )
+offset = Vector2( -256, -64 )
+resizable = true
+comment = true
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+group_name = "Preload"
+
+[node name="FileNode2" type="GraphNode" parent="." instance=ExtResource( 5 )]
+margin_left = 443.328
+margin_top = 127.243
+margin_right = 588.328
+margin_bottom = 189.243
+rect_scale = Vector2( 0.8, 0.8 )
+mouse_filter = 1
+custom_constants/port_offset = 0
+custom_styles/frame = ExtResource( 9 )
+custom_styles/selectedframe = ExtResource( 6 )
+offset = Vector2( 128, -32 )
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+path = "res://Maps/GameOver.tscn"
+icon_class = "Node2D"
+script_path = "res://Scripts/GameOver.gd"
+script_name = "GameOver.gd"
+
+[node name="FileNode4" type="GraphNode" parent="." instance=ExtResource( 5 )]
+margin_left = 596.928
+margin_top = 127.243
+margin_right = 791.928
+margin_bottom = 189.243
+rect_scale = Vector2( 0.8, 0.8 )
+mouse_filter = 1
+custom_constants/port_offset = 0
+custom_styles/frame = ExtResource( 9 )
+custom_styles/selectedframe = ExtResource( 6 )
+offset = Vector2( 320, -32 )
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+path = "res://Maps/TestingBeachMap.tscn"
+icon_class = "Node2D"
+script_path = "res://Scripts/JustTransition.gd"
+script_name = "JustTransition.gd"
+
+[node name="FileNode5" type="GraphNode" parent="." instance=ExtResource( 5 )]
+margin_left = 596.928
+margin_top = 178.443
+margin_right = 770.928
+margin_bottom = 240.443
+rect_scale = Vector2( 0.8, 0.8 )
+mouse_filter = 1
+custom_constants/port_offset = 0
+custom_styles/frame = ExtResource( 9 )
+custom_styles/selectedframe = ExtResource( 6 )
+offset = Vector2( 320, 32 )
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+path = "res://Maps/TestingFatMap.tscn"
+icon_class = "Node2D"
+script_path = "res://Scripts/JustTransition.gd"
+script_name = "JustTransition.gd"
+
+[node name="FileNode6" type="GraphNode" parent="." instance=ExtResource( 5 )]
+margin_left = 596.928
+margin_top = 229.643
+margin_right = 753.928
+margin_bottom = 291.643
+rect_scale = Vector2( 0.8, 0.8 )
+mouse_filter = 1
+custom_constants/port_offset = 0
+custom_styles/frame = ExtResource( 9 )
+custom_styles/selectedframe = ExtResource( 6 )
+offset = Vector2( 320, 96 )
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+path = "res://Maps/TestingMap.tscn"
+icon_class = "Node2D"
+script_path = "res://Scripts/JustTransition.gd"
+script_name = "JustTransition.gd"
+
+[node name="FileNode7" type="GraphNode" parent="." instance=ExtResource( 5 )]
+margin_left = 596.928
+margin_top = 280.843
+margin_right = 756.928
+margin_bottom = 342.843
+rect_scale = Vector2( 0.8, 0.8 )
+mouse_filter = 1
+custom_constants/port_offset = 0
+custom_styles/frame = ExtResource( 9 )
+custom_styles/selectedframe = ExtResource( 6 )
+offset = Vector2( 320, 160 )
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+path = "res://Maps/TestingTrack.tscn"
+icon_class = "Node2D"
+script_path = "res://Scripts/JustTransition.gd"
+script_name = "JustTransition.gd"
+
+[node name="FileNode8" type="GraphNode" parent="." instance=ExtResource( 5 )]
+margin_left = 596.928
+margin_top = 332.043
+margin_right = 753.928
+margin_bottom = 394.043
+rect_scale = Vector2( 0.8, 0.8 )
+mouse_filter = 1
+custom_constants/port_offset = 0
+custom_styles/frame = ExtResource( 9 )
+custom_styles/selectedframe = ExtResource( 6 )
+offset = Vector2( 320, 224 )
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+path = "res://Maps/SliderTest.tscn"
+icon_class = "Control"
+script_path = "res://Scripts/JustTransition.gd"
+script_name = "JustTransition.gd"
+
+[node name="FileNode9" type="GraphNode" parent="." instance=ExtResource( 5 )]
+margin_left = 596.928
+margin_top = 383.243
+margin_right = 753.928
+margin_bottom = 445.243
+rect_scale = Vector2( 0.8, 0.8 )
+mouse_filter = 1
+custom_constants/port_offset = 0
+custom_styles/frame = ExtResource( 9 )
+custom_styles/selectedframe = ExtResource( 6 )
+offset = Vector2( 320, 288 )
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+path = "res://Maps/Level01.tscn"
+icon_class = "Node2D"
+script_path = "res://Scripts/JustTransition.gd"
+script_name = "JustTransition.gd"
+
+[node name="FileNode3" type="GraphNode" parent="." instance=ExtResource( 5 )]
+margin_left = 443.328
+margin_top = 178.443
+margin_right = 590.328
+margin_bottom = 240.443
+rect_scale = Vector2( 0.8, 0.8 )
+mouse_filter = 1
+custom_constants/port_offset = 0
+custom_styles/frame = ExtResource( 9 )
+custom_styles/selectedframe = ExtResource( 6 )
+offset = Vector2( 128, 32 )
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+path = "res://Maps/MainMenu.tscn"
+icon_class = "Node2D"
+script_path = "res://Scripts/MainMenu.gd"
+script_name = "MainMenu.gd"
+
+[node name="FileNode12" type="GraphNode" parent="." instance=ExtResource( 5 )]
+margin_left = 136.128
+margin_top = 127.243
+margin_right = 274.128
+margin_bottom = 159.243
+rect_scale = Vector2( 0.8, 0.8 )
+mouse_filter = 1
+custom_constants/port_offset = 0
+custom_styles/frame = ExtResource( 9 )
+custom_styles/selectedframe = ExtResource( 6 )
+offset = Vector2( -256, -32 )
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+path = "res://Preload/MainScene.gd"
+resource_type = 2
+icon_class = "Script"
+
+[node name="FileNode13" type="GraphNode" parent="." instance=ExtResource( 5 )]
+margin_left = 289.728
+margin_top = 127.243
+margin_right = 403.728
+margin_bottom = 189.243
+rect_scale = Vector2( 0.8, 0.8 )
+mouse_filter = 1
+custom_constants/port_offset = 0
+custom_styles/frame = ExtResource( 9 )
+custom_styles/selectedframe = ExtResource( 6 )
+offset = Vector2( -64, -32 )
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+path = "res://Preload/Music.tscn"
+icon_class = "Node"
+script_path = "res://Scripts/Music.gd"
+script_name = "Music.gd"
+
+[node name="FileNode" type="GraphNode" parent="." instance=ExtResource( 5 )]
+margin_left = 136.128
+margin_top = 152.843
+margin_right = 301.128
+margin_bottom = 214.843
+rect_scale = Vector2( 0.8, 0.8 )
+mouse_filter = 1
+custom_constants/port_offset = 0
+custom_styles/frame = ExtResource( 9 )
+custom_styles/selectedframe = ExtResource( 6 )
+offset = Vector2( -256, 0 )
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+path = "res://Preload/ScreenEffects.tscn"
+icon_class = "CanvasLayer"
+script_path = "res://Scripts/ScreenEffects.gd"
+script_name = "ScreenEffects.gd"
+
+[node name="FileNode17" type="GraphNode" parent="." instance=ExtResource( 5 )]
+margin_left = 136.128
+margin_top = 229.643
+margin_right = 292.128
+margin_bottom = 291.643
+rect_scale = Vector2( 0.8, 0.8 )
+mouse_filter = 1
+custom_constants/port_offset = 0
+custom_styles/frame = ExtResource( 9 )
+custom_styles/selectedframe = ExtResource( 6 )
+offset = Vector2( -256, 96 )
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+path = "res://Preload/ProgressBar.tscn"
+icon_class = "CanvasLayer"
+script_path = "res://Preload/ProgressBar.gd"
+script_name = "ProgressBar.gd"
+
+[node name="FileNode22" type="GraphNode" parent="." instance=ExtResource( 5 )]
+margin_left = 136.128
+margin_top = 280.843
+margin_right = 274.128
+margin_bottom = 342.843
+rect_scale = Vector2( 0.8, 0.8 )
+mouse_filter = 1
+custom_constants/port_offset = 0
+custom_styles/frame = ExtResource( 9 )
+custom_styles/selectedframe = ExtResource( 6 )
+offset = Vector2( -256, 160 )
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+path = "res://Preload/Stats.tscn"
+icon_class = "Node"
+script_path = "res://Scripts/PlayerStats.gd"
+script_name = "PlayerStats.gd"
+
+[node name="FileNode20" type="GraphNode" parent="." instance=ExtResource( 5 )]
+margin_left = 264.128
+margin_top = 306.443
+margin_right = 426.128
+margin_bottom = 338.443
+rect_scale = Vector2( 0.8, 0.8 )
+mouse_filter = 1
+custom_constants/port_offset = 0
+custom_styles/frame = ExtResource( 9 )
+custom_styles/selectedframe = ExtResource( 6 )
+offset = Vector2( -96, 192 )
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+path = "res://Preload/SceneChanger.gd"
+resource_type = 2
+icon_class = "Script"
+
+[node name="FileNode19" type="GraphNode" parent="." instance=ExtResource( 5 )]
+margin_left = 289.728
+margin_top = 280.843
+margin_right = 423.728
+margin_bottom = 312.843
+rect_scale = Vector2( 0.8, 0.8 )
+mouse_filter = 1
+custom_constants/port_offset = 0
+custom_styles/frame = ExtResource( 9 )
+custom_styles/selectedframe = ExtResource( 6 )
+offset = Vector2( -64, 160 )
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+path = "res://Preload/SaveGame.gd"
+resource_type = 2
+icon_class = "Script"
+
+[node name="FileNode18" type="GraphNode" parent="." instance=ExtResource( 5 )]
+margin_left = 315.328
+margin_top = 255.243
+margin_right = 409.328
+margin_bottom = 287.243
+rect_scale = Vector2( 0.8, 0.8 )
+mouse_filter = 1
+custom_constants/port_offset = 0
+custom_styles/frame = ExtResource( 9 )
+custom_styles/selectedframe = ExtResource( 6 )
+offset = Vector2( -32, 128 )
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+path = "res://Preload/save.gd"
+resource_type = 2
+icon_class = "Script"
+
+[node name="FileNode11" type="GraphNode" parent="." instance=ExtResource( 5 )]
+margin_left = 264.128
+margin_top = 332.043
+margin_right = 430.128
+margin_bottom = 364.043
+rect_scale = Vector2( 0.8, 0.8 )
+mouse_filter = 1
+custom_constants/port_offset = 0
+custom_styles/frame = ExtResource( 9 )
+custom_styles/selectedframe = ExtResource( 6 )
+offset = Vector2( -96, 224 )
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+path = "res://Preload/global_settings.gd"
+resource_type = 2
+icon_class = "Script"
+
+[node name="FileNode15" type="GraphNode" parent="." instance=ExtResource( 5 )]
+margin_left = 136.128
+margin_top = 434.443
+margin_right = 315.128
+margin_bottom = 496.443
+rect_scale = Vector2( 0.8, 0.8 )
+mouse_filter = 1
+custom_constants/port_offset = 0
+custom_styles/frame = ExtResource( 9 )
+custom_styles/selectedframe = ExtResource( 6 )
+offset = Vector2( -256, 352 )
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+path = "res://Preload/PlayerInventory.tscn"
+icon_class = "Node"
+script_path = "res://addons/gdinv/GDInv_Inventory.gd"
+script_name = "GDInv_Inventory.gd"
+
+[node name="FileNode10" type="GraphNode" parent="." instance=ExtResource( 5 )]
+margin_left = 136.128
+margin_top = 383.243
+margin_right = 320.128
+margin_bottom = 445.243
+rect_scale = Vector2( 0.8, 0.8 )
+mouse_filter = 1
+custom_constants/port_offset = 0
+custom_styles/frame = ExtResource( 9 )
+custom_styles/selectedframe = ExtResource( 6 )
+offset = Vector2( -256, 288 )
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+path = "res://Preload/debug_interface.tscn"
+icon_class = "Control"
+script_path = "res://Scripts/debug_interface.gd"
+script_name = "debug_interface.gd"
+
+[node name="FileNode14" type="GraphNode" parent="." instance=ExtResource( 5 )]
+margin_left = 136.128
+margin_top = 485.643
+margin_right = 357.128
+margin_bottom = 547.643
+rect_scale = Vector2( 0.8, 0.8 )
+mouse_filter = 1
+custom_constants/port_offset = 0
+custom_styles/frame = ExtResource( 9 )
+custom_styles/selectedframe = ExtResource( 6 )
+offset = Vector2( -256, 416 )
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+path = "res://Preload/PlayerArmorInventory.tscn"
+icon_class = "Node"
+script_path = "res://addons/gdinv/GDInv_Inventory.gd"
+script_name = "GDInv_Inventory.gd"
+
+[node name="FileNode16" type="GraphNode" parent="." instance=ExtResource( 5 )]
+margin_left = 776.128
+margin_top = 101.643
+margin_right = 967.128
+margin_bottom = 133.643
+rect_scale = Vector2( 0.8, 0.8 )
+mouse_filter = 1
+custom_constants/port_offset = 0
+custom_styles/frame = ExtResource( 9 )
+custom_styles/selectedframe = ExtResource( 6 )
+offset = Vector2( 544, -64 )
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+path = "res://Scripts/Command Handler.gd"
+resource_type = 2
+icon_class = "Script"
+
+[node name="FileNode21" type="GraphNode" parent="." instance=ExtResource( 5 )]
+margin_left = 776.128
+margin_top = 152.843
+margin_right = 891.128
+margin_bottom = 214.843
+rect_scale = Vector2( 0.8, 0.8 )
+mouse_filter = 1
+custom_constants/port_offset = 0
+custom_styles/frame = ExtResource( 9 )
+custom_styles/selectedframe = ExtResource( 6 )
+offset = Vector2( 544, 0 )
+selected = true
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+path = "res://Nodes/Instances/Player.tscn"
+icon_class = "KinematicBody2D"
+script_path = "res://Scripts/Player.gd"
+script_name = "Player.gd"
+
+[connection signal="delete_nodes_request" from="." to="." method="_on_GraphEdit_delete_nodes_request"]

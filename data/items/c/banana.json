@@ -1,0 +1,15 @@
+{
+	"id": "banana",
+	"attributes": {
+		"name": "Banana",
+		"description": "Very well known yellow fruit. ...or berry? Hard to choose. Found in tropical terrains.",
+		"maxStackSize": 10,
+		"type": "consumable",
+		"rarity": "UNCOMMON",
+		"on_consume": {
+			"heal": 20,
+			"mana": 5,
+			"stamina": 15
+		}
+	}
+}

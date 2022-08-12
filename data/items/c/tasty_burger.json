@@ -1,0 +1,15 @@
+{
+	"id": "tasty_burger",
+	"attributes": {
+		"name": "Tasty Burger",
+		"description": "A delicious homemade burger. You can't stop wanting to eat more of them!",
+		"maxStackSize": 99,
+		"type": "consumable",
+		"rarity": "UNCOMMON",
+		"on_consume": {
+			"heal": 40,
+			"mana": 10,
+			"stamina": 0
+		}
+	}
+}

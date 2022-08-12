@@ -1,0 +1,10 @@
+{
+    "id": "doll",
+    "attributes": {
+        "name": "Doll",
+        "description": "",
+        "maxStackSize": 1,
+        "type": "quest_item",
+        "rarity": "QUEST"
+    }
+}

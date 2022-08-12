@@ -1,0 +1,9 @@
+{
+	"id": "trash",
+	"attributes": {
+		"name": "Trash",
+		"maxStackSize": 999,
+		"type": "trash",
+		"rarity": "COMMON"
+	}
+}

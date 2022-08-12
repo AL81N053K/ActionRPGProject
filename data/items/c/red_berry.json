@@ -1,0 +1,15 @@
+{
+	"id": "red_berry",
+	"attributes": {
+		"name": "Redberry",
+		"description": "Tasty red berries. Eating them makes you feel bit healthy. Found in forest.",
+		"maxStackSize": 99,
+		"type": "consumable",
+		"rarity": "COMMON",
+		"on_consume": {
+			"heal": 8,
+			"mana": 0,
+			"stamina": 0
+		}
+	}
+}

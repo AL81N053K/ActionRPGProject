@@ -1,0 +1,15 @@
+{
+	"id": "potato",
+	"attributes": {
+		"name": "Potato",
+		"description": "Covered in dirt. Good to make dishes or salads. Found on farms and in the wild.",
+		"maxStackSize": 99,
+		"type": "consumable",
+		"rarity": "COMMON",
+		"on_consume": {
+			"heal": 4,
+			"mana": 0,
+			"stamina": 0
+		}
+	}
+}

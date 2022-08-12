@@ -1,0 +1,18 @@
+{
+	"id": "fairy",
+	"attributes": {
+		"name": "Fairy",
+		"description": "Revives you after defeat, heals 100% of your health.",
+		"maxStackSize": 5,
+		"type": "utility",
+		"rarity": "EPIC",
+		"utility": {
+			"give_effect": false,
+			"revive": true,
+			"effect": {
+				"type": "procent",
+				"amount": 1
+			}
+		}
+	}
+}

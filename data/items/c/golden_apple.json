@@ -1,0 +1,15 @@
+{
+	"id": "golden_apple",
+	"attributes": {
+		"name": "Golden Apple",
+		"description": "A shiny apple, covered by pure gold. Somehow still edible. Makes you feel stronger. Found rarely from elite enemies and bosses.",
+		"maxStackSize": 10,
+		"type": "consumable",
+		"rarity": "SUPER_RARE",
+		"on_consume": {
+			"heal": 400,
+			"mana": 400,
+			"stamina": 250
+		}
+	}
+}

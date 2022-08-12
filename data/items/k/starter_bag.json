@@ -1,0 +1,42 @@
+{
+    "id": "starter_bag",
+    "attributes": {
+        "name": "Starter Bag",
+        "description": "Starter Bag - Made for testing.",
+        "maxStackSize": 1,
+        "type": "kit",
+        "rarity": "RARE",
+        "kit": [
+            {
+                "id": "red_berry",
+				"name": "Redberry",
+                "quantity": 10
+            },
+            {
+                "id": "blue_berry",
+				"name": "Blueberry",
+                "quantity": 10
+            },
+            {
+                "id": "bat",
+				"name": "Bat",
+                "quantity": 1
+            },
+            {
+                "id": "worn_pants",
+				"name": "Worn Pants",
+                "quantity": 1
+            },
+            {
+                "id": "dirty_socks",
+				"name": "Dirty Socks",
+                "quantity": 1
+            },
+            {
+                "id": "leather_jacket",
+				"name": "Leather Jacket",
+                "quantity": 1
+            }
+        ]
+    }
+}

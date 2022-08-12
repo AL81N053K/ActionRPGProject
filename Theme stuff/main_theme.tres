@@ -1,0 +1,259 @@
+[gd_resource type="Theme" load_steps=42 format=2]
+
+[ext_resource path="res://Theme stuff/empty_box.tres" type="StyleBox" id=1]
+[ext_resource path="res://Theme stuff/Textures/CheckButton_Off_disabled.png" type="Texture" id=2]
+[ext_resource path="res://Theme stuff/Textures/CheckButton_On_disabled.png" type="Texture" id=3]
+[ext_resource path="res://Theme stuff/Textures/CheckButton_On.png" type="Texture" id=4]
+[ext_resource path="res://Theme stuff/Textures/CheckButton_Off.png" type="Texture" id=5]
+[ext_resource path="res://Theme stuff/Textures/radio_checked.png" type="Texture" id=6]
+[ext_resource path="res://Theme stuff/Textures/radio_unchecked.png" type="Texture" id=7]
+[ext_resource path="res://Theme stuff/Textures/grabber_highligth.png" type="Texture" id=8]
+[ext_resource path="res://Theme stuff/Textures/grabber_disabled.png" type="Texture" id=9]
+[ext_resource path="res://Theme stuff/Textures/grabber.png" type="Texture" id=10]
+[ext_resource path="res://Theme stuff/Textures/tick.png" type="Texture" id=11]
+[ext_resource path="res://Theme stuff/Textures/CheckButton_Off_focus.png" type="Texture" id=12]
+[ext_resource path="res://Theme stuff/Textures/CheckButton_On_focus.png" type="Texture" id=13]
+[ext_resource path="res://Theme stuff/Textures/CheckButton_On_hover.png" type="Texture" id=14]
+[ext_resource path="res://Theme stuff/Textures/CheckButton_Off_hover.png" type="Texture" id=15]
+[ext_resource path="res://Theme stuff/Textures/arrow_tree.png" type="Texture" id=16]
+[ext_resource path="res://Theme stuff/Textures/arrow.png" type="Texture" id=17]
+[ext_resource path="res://Theme stuff/Textures/updown_arrow.png" type="Texture" id=18]
+[ext_resource path="res://Theme stuff/Textures/arrow_tree_collapsed.png" type="Texture" id=19]
+[ext_resource path="res://Theme stuff/Textures/select_arrow.png" type="Texture" id=20]
+[ext_resource path="res://Theme stuff/Textures/check_unchecked.png" type="Texture" id=21]
+[ext_resource path="res://Theme stuff/Textures/radio_unchecked_disabled.png" type="Texture" id=22]
+[ext_resource path="res://Theme stuff/Textures/check_unchecked_disabled.png" type="Texture" id=23]
+[ext_resource path="res://Theme stuff/Textures/check_checked.png" type="Texture" id=24]
+[ext_resource path="res://Theme stuff/Textures/radio_checked_disabled.png" type="Texture" id=25]
+[ext_resource path="res://Theme stuff/Textures/check_checked_disabled.png" type="Texture" id=26]
+[ext_resource path="res://Theme stuff/selected.tres" type="StyleBox" id=27]
+
+[sub_resource type="StyleBoxLine" id=9]
+color = Color( 1, 1, 1, 0.588235 )
+thickness = 2
+
+[sub_resource type="StyleBoxFlat" id=6]
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color( 0.168627, 0.168627, 0.168627, 1 )
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id=7]
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color( 0.168627, 0.168627, 0.168627, 1 )
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id=8]
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color( 0.0509804, 0.0509804, 0.0509804, 1 )
+border_color = Color( 0.968627, 0.968627, 0.968627, 1 )
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+anti_aliasing_size = 0.135
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.47451, 0.784314, 0.921569, 1 )
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id=11]
+content_margin_left = 5.0
+content_margin_right = 5.0
+content_margin_top = 3.0
+content_margin_bottom = 3.0
+bg_color = Color( 0, 0, 0, 0.470588 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 0.333333 )
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id=12]
+content_margin_left = 5.0
+content_margin_right = 5.0
+content_margin_top = 3.0
+content_margin_bottom = 3.0
+bg_color = Color( 0.243137, 0.243137, 0.243137, 0.745098 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.8, 0.8, 0.8, 0.313726 )
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id=5]
+content_margin_left = 5.0
+content_margin_right = 5.0
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color( 0.0901961, 0.0901961, 0.0901961, 0.745098 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 0.588235 )
+border_color = Color( 1, 1, 1, 0.25 )
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=2]
+content_margin_left = 15.0
+content_margin_right = 15.0
+bg_color = Color( 0, 0, 0, 0.352941 )
+border_color = Color( 1, 1, 1, 0.5 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+anti_aliasing_size = 0.5
+
+[sub_resource type="StyleBoxFlat" id=3]
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color( 0, 0, 0, 0.196078 )
+border_color = Color( 1, 1, 1, 0.5 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+expand_margin_left = 15.0
+expand_margin_right = 15.0
+expand_margin_bottom = 1.0
+anti_aliasing_size = 0.5
+
+[sub_resource type="StyleBoxFlat" id=4]
+content_margin_left = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 3.0
+bg_color = Color( 0, 0, 0, 0.588235 )
+border_color = Color( 1, 1, 1, 0.501961 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id=13]
+content_margin_left = 5.0
+content_margin_right = 5.0
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.47451, 0.784314, 0.921569, 1 )
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id=14]
+content_margin_left = 3.0
+content_margin_right = 3.0
+content_margin_top = 3.0
+content_margin_bottom = 3.0
+bg_color = Color( 0, 0, 0, 0.705882 )
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[resource]
+Button/colors/font_color_focus = Color( 0.47451, 0.784314, 0.921569, 1 )
+Button/colors/font_color_hover = Color( 0.329412, 0.619608, 0.901961, 1 )
+Button/colors/font_color_pressed = Color( 0, 0.705882, 0.847059, 1 )
+Button/styles/disabled = ExtResource( 1 )
+Button/styles/focus = ExtResource( 1 )
+Button/styles/hover = ExtResource( 1 )
+Button/styles/normal = ExtResource( 1 )
+Button/styles/pressed = ExtResource( 1 )
+CheckBox/icons/checked = ExtResource( 24 )
+CheckBox/icons/checked_disabled = ExtResource( 26 )
+CheckBox/icons/radio_checked = ExtResource( 6 )
+CheckBox/icons/radio_checked_disabled = ExtResource( 25 )
+CheckBox/icons/radio_unchecked = ExtResource( 7 )
+CheckBox/icons/radio_unchecked_disabled = ExtResource( 22 )
+CheckBox/icons/unchecked = ExtResource( 21 )
+CheckBox/icons/unchecked_disabled = ExtResource( 23 )
+CheckButton/icons/off = ExtResource( 5 )
+CheckButton/icons/off_disabled = ExtResource( 2 )
+CheckButton/icons/off_focus = ExtResource( 12 )
+CheckButton/icons/off_hover = ExtResource( 15 )
+CheckButton/icons/on = ExtResource( 4 )
+CheckButton/icons/on_disabled = ExtResource( 3 )
+CheckButton/icons/on_focus = ExtResource( 13 )
+CheckButton/icons/on_hover = ExtResource( 14 )
+CheckButton/styles/focus = ExtResource( 1 )
+HSeparator/styles/separator = SubResource( 9 )
+HSlider/icons/grabber = ExtResource( 10 )
+HSlider/icons/grabber_disabled = ExtResource( 9 )
+HSlider/icons/grabber_highlight = ExtResource( 8 )
+HSlider/icons/tick = ExtResource( 11 )
+HSlider/styles/grabber_area = SubResource( 6 )
+HSlider/styles/grabber_area_highlight = SubResource( 7 )
+HSlider/styles/slider = SubResource( 8 )
+LineEdit/styles/focus = SubResource( 10 )
+LineEdit/styles/normal = SubResource( 11 )
+LineEdit/styles/read_only = SubResource( 12 )
+OptionButton/colors/font_color_focus = Color( 0.47451, 0.784314, 0.921569, 1 )
+OptionButton/colors/font_color_hover = Color( 0.329412, 0.619608, 0.901961, 1 )
+OptionButton/colors/font_color_pressed = Color( 0, 0.705882, 0.847059, 1 )
+OptionButton/constants/arrow_margin = 0
+OptionButton/constants/hseparation = 2
+OptionButton/icons/arrow = ExtResource( 17 )
+OptionButton/styles/disabled = ExtResource( 1 )
+OptionButton/styles/focus = ExtResource( 1 )
+OptionButton/styles/hover = ExtResource( 1 )
+OptionButton/styles/normal = ExtResource( 1 )
+OptionButton/styles/pressed = ExtResource( 1 )
+PopupMenu/icons/checked = ExtResource( 24 )
+PopupMenu/icons/radio_checked = ExtResource( 6 )
+PopupMenu/icons/radio_unchecked = ExtResource( 7 )
+PopupMenu/icons/submenu = ExtResource( 19 )
+PopupMenu/icons/unchecked = ExtResource( 21 )
+PopupMenu/styles/hover = ExtResource( 27 )
+PopupMenu/styles/panel = SubResource( 5 )
+SpinBox/icons/updown = ExtResource( 18 )
+TabContainer/constants/side_margin = 0
+TabContainer/styles/panel = SubResource( 1 )
+TabContainer/styles/tab_bg = SubResource( 2 )
+TabContainer/styles/tab_disabled = SubResource( 3 )
+TabContainer/styles/tab_fg = SubResource( 4 )
+TextEdit/styles/focus = SubResource( 13 )
+TextEdit/styles/normal = SubResource( 14 )
+TextEdit/styles/read_only = SubResource( 14 )
+Tree/icons/arrow = ExtResource( 16 )
+Tree/icons/arrow_collapsed = ExtResource( 19 )
+Tree/icons/checked = ExtResource( 24 )
+Tree/icons/select_arrow = ExtResource( 20 )
+Tree/icons/unchecked = ExtResource( 21 )
+Tree/icons/updown = ExtResource( 18 )
+Tree/styles/selected = ExtResource( 27 )
+Tree/styles/selected_focus = ExtResource( 27 )

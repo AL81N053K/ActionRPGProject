@@ -1,0 +1,12 @@
+{
+    "id": "wool_pants",
+    "attributes": {
+        "name": "Wool Pants",
+        "description": "Fuzzy but warm pants.",
+        "maxStackSize": 1,
+        "type": "armor",
+        "rarity": "COMMON",
+        "defence": 2,
+        "placement": "legs"
+    }
+}

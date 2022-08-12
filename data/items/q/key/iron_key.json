@@ -1,0 +1,10 @@
+{
+    "id": "iron_key",
+    "attributes": {
+        "name": "Iron Key",
+        "description": "Used to open normal doors.",
+        "maxStackSize": 1,
+        "type": "key",
+        "rarity": "QUEST"
+    }
+}

@@ -1,0 +1,42 @@
+L|Porthaethwy
+Create Town
+Add NPCs
+Create Blacksmith
+Create Shop
+
+L|Wellspring
+Create Town
+Add NPCs
+Create Blacksmith
+Create Shop
+
+L|Oakheart
+Create Town
+Add NPCs
+Create Blacksmith
+Create Shops
+Create Cafe "Olive Joy"
+
+L|Blencalgo
+Create Town
+Add NPCs
+Create Shops
+Create Cafe "Salty Treats"
+Create Cafe "Hot & Cold"
+Create Cathedral Dungeon
+
+L|Glostead
+Create City
+Add NPCs
+Create Shop
+Create Secret Shop
+Create Cafe "Jasmine Enigma"
+Create Cafe "Jasmine Garden"
+Create Cafe "Rick Oasis"
+
+L|Qens
+Create Capital
+Add NPCs
+Create Shops
+Create Cafe "Marble Cottage"
+Create "The Eternal Agony Caverns" Dungeon

@@ -1,0 +1,15 @@
+{
+    "id": "rare_candy",
+    "attributes": {
+        "name": "Rare Candy",
+		"description": "A very rare candy. Grants an instant level up.",
+        "maxStackSize": 99,
+        "type": "xp_gain",
+		"rarity": "EPIC",
+		"on_consume": {
+			"min_xp": 0,
+			"max_xp": 0,
+			"insta_level_up": true
+		}
+	}
+}

@@ -1,0 +1,15 @@
+{
+    "id": "big_xp_bag",
+    "attributes": {
+        "name": "Big XP Bag",
+		"description": "A big sack containing a huge amount of experience orbs.",
+        "maxStackSize": 99,
+        "type": "xp_gain",
+		"rarity": "SUPER_RARE",
+		"on_consume": {
+			"min_xp": 1000,
+			"max_xp": 2000,
+			"insta_level_up": false
+		}
+	}
+}

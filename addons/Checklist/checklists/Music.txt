@@ -1,0 +1,7 @@
+Create Main Theme
+Create Game Over Theme
+L|SFX
+Create proper attack
+Create proper roll
+Create item pickup
+Create currency pick up

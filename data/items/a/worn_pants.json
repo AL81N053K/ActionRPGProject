@@ -1,0 +1,12 @@
+{
+    "id": "worn_pants",
+    "attributes": {
+        "name": "Worn Pants",
+        "description": "Old, damaged pants. You don't remember when and where you got them but you had them when you've been awaken.",
+        "maxStackSize": 1,
+        "type": "armor",
+        "rarity": "COMMON",
+        "defence": 1,
+        "placement": "legs"
+    }
+}

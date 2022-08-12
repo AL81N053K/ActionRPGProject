@@ -1,0 +1,10 @@
+{
+    "id": "brick",
+    "attributes": {
+        "name": "Brick",
+        "description": "Strong, light building material made out of clay.",
+        "maxStackSize": 999,
+        "type": "material",
+        "rarity": "COMMON"
+    }
+}

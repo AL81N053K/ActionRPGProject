@@ -1,0 +1,10 @@
+{
+    "id": "gold_bar",
+    "attributes": {
+        "name": "Gold Bar",
+        "description": "Sihny gold bar. Gold usally isn't a strong material, but it's worth a lot of money.",
+        "maxStackSize": 999,
+        "type": "material",
+        "rarity": "UNCOMMON"
+    }
+}

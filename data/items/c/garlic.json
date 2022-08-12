@@ -1,0 +1,15 @@
+{
+	"id": "garlic",
+	"attributes": {
+		"name": "Garlic",
+		"description": "Good for vapires. ...or at least legens says that. But hey, at least garlic is good for your health! Found on farms and sometimes in the wild.",
+		"maxStackSize": 99,
+		"type": "consumable",
+		"rarity": "COMMON",
+		"on_consume": {
+			"heal": 3,
+			"mana": 0,
+			"stamina": 0
+		}
+	}
+}

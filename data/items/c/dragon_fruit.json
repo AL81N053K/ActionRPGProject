@@ -1,0 +1,15 @@
+{
+	"id": "dragon_fruit",
+	"attributes": {
+		"name": "Dragon Fruit",
+		"description": "Juicy fruit, adding a lot of flavours to any dish. Exelent mix is with banana, honey, yogurt and berries. Found in dragon terrains.",
+		"maxStackSize": 10,
+		"type": "consumable",
+		"rarity": "UNCOMMON",
+		"on_consume": {
+			"heal": 20,
+			"mana": 5,
+			"stamina": 15
+		}
+	}
+}

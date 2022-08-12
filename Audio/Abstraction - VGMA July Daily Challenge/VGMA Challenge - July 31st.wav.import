@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/VGMA Challenge - July 31st.wav-3335a6f95b070882275be5d63b5b9c4d.sample"
+
+[deps]
+
+source_file="res://Audio/Abstraction - VGMA July Daily Challenge/VGMA Challenge - July 31st.wav"
+dest_files=[ "res://.import/VGMA Challenge - July 31st.wav-3335a6f95b070882275be5d63b5b9c4d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

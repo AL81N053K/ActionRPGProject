@@ -1,0 +1,15 @@
+{
+	"id": "snow_apple",
+	"attributes": {
+		"name": "Snow Apple",
+		"description": "Very cold apple. Don't try to bite the apple unless you want a brain freeze. Good to cool yourself down. Found on trees in Snow Village.",
+		"maxStackSize": 99,
+		"type": "consumable",
+		"rarity": "COMMON",
+		"on_consume": {
+			"heal": 10,
+			"mana": 1,
+			"stamina": 0
+		}
+	}
+}

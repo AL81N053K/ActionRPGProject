@@ -1,0 +1,20 @@
+{
+	"id": "healing_area",
+	"attributes": {
+		"name": "Pocket Healing Mashine",
+		"description": "Portable healing station. Heals health in it's radius.",
+		"maxStackSize": 5,
+		"type": "utility",
+		"rarity": "RARE",
+		"utility": {
+			"give_effect": true,
+			"revive": false,
+			"effect": {
+				"hp": 2,
+				"mp": 0,
+				"stamina": 0,
+				"delay": 1.0
+			}
+		}
+	}
+}

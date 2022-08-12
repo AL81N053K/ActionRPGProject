@@ -1,0 +1,12 @@
+{
+    "id": "dirty_socks",
+    "attributes": {
+        "name": "Dirty Socks",
+        "description": "Old, dirty socks. You don't remember when and where you got them but you had them when you've been awaken.",
+        "maxStackSize": 1,
+        "type": "armor",
+        "rarity": "COMMON",
+        "defence": 1,
+        "placement": "feet"
+    }
+}

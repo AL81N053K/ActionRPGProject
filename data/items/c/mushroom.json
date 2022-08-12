@@ -1,0 +1,15 @@
+{
+	"id": "mushroom",
+	"attributes": {
+		"name": "Mushroom",
+		"description": "Eatable mushroom. Good for stews. Found in forest.",
+		"maxStackSize": 99,
+		"type": "consumable",
+		"rarity": "COMMON",
+		"on_consume": {
+			"heal": 4,
+			"mana": 0,
+			"stamina": 0
+		}
+	}
+}

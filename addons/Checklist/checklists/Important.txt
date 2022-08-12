@@ -1,0 +1,22 @@
+Create name for the Game
+Create logo and icons
+L|Plot
+I|1
+Create whole story
+Create main objective
+Create main collectable
+I|1
+Prolouge
+Chapter 1
+Chapter 2
+Chapter 3
+Chapter 4
+Chapter 5
+Chapter 6
+Chapter 7
+Chapter 8
+Post Game
+I|=0
+Create Currency
+Create Own Language
+Create Language Font

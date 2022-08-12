@@ -1,0 +1,15 @@
+{
+	"id": "jerky",
+	"attributes": {
+		"name": "Jerky",
+		"description": "Meat with salt. Good for someting to quickly eat wile on a journey.",
+		"maxStackSize": 99,
+		"type": "consumable",
+		"rarity": "COMMON",
+		"on_consume": {
+			"heal": 15,
+			"mana": 0,
+			"stamina": 0
+		}
+	}
+}

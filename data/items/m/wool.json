@@ -1,0 +1,10 @@
+{
+    "id": "wool",
+    "attributes": {
+        "name": "Wool",
+        "description": "Fluffy. Armor with this can provide heat.",
+        "maxStackSize": 999,
+        "type": "material",
+        "rarity": "COMMON"
+    }
+}
