@@ -34,6 +34,7 @@ var state = IDLE
 var knockback_base: int = 200
 var slowness = 1.0
 var rotationSpeed = 2.0
+var a_tick = 2
 
 func _ready():
 	hide()
@@ -78,7 +79,10 @@ func _physics_process(delta):
 			Music.SetGameState("Combat")
 			var player = playerDetection.player
 			if player != null and path.size() > 0:
-				generate_path(player.global_position)
+				a_tick -= 1
+				if a_tick == 1: 
+					generate_path(player.global_position)
+					a_tick = 10
 				navigate(delta)
 				_rotate_to_target(player.global_position, delta)
 			else:

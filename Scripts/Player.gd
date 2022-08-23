@@ -46,6 +46,7 @@ var speed_modifier_health = 1.0
 var out_of_stamina = false
 var stamina_cooldown: int = -200
 var slowmo:bool = false
+var die = false
 
 func _ready():
 	randomize()
@@ -73,7 +74,7 @@ func _on_joy_connection_changed(device_id, connected):
 func _physics_process(delta):
 	var DEFAULT_SPEED = stats.default_speed
 	speed_add = stats.speed_add
-	swordHitbox.damage = stats.actual_damage
+	swordHitbox.damage = stats.damage
 	calc_speed = float((DEFAULT_SPEED + speed_add) * speed_modifier * speed_modifier_health)
 	walkTimeScale = float(((calc_speed / speed_modifier) * (clamp(speed_modifier * 0.5, 1.0, 2.5))) / 140)
 	attackTimeScale = float(stats.attack_speed / 50.0)
@@ -224,24 +225,24 @@ func swish_attack():
 	if stats.health < stats.max_health and stats.health != 1 : return
 	
 	projectile.get_node("Stats").life_stamp = .8
-	projectile.get_node("Stats").max_health = stats.actual_damage + 1
-	projectile.get_node("HitBox").damage = stats.actual_damage
+	projectile.get_node("Stats").max_health = stats.damage + 1
+	projectile.get_node("HitBox").damage = stats.damage
 	projectile.DEFAULT_SPEED = clamp(275 * attackTimeScale, 20, 700)
 	projectile.position = global_position + (roll_vector * 15)
 	projectile.direction = roll_vector
 	
 	if stats.health == 1: 
 		projectile.get_node("Sprite").self_modulate = Color(1.0,0.15,0.15) 
-		projectile.get_node("Stats").max_health = stats.actual_damage * 5
-		projectile.get_node("HitBox").damage = stats.actual_damage * 2
+		projectile.get_node("Stats").max_health = stats.damage * 5
+		projectile.get_node("HitBox").damage = stats.damage * 2
 	if stats.health == stats.max_health and stats.temp_health > 0:
 		projectile.get_node("Sprite").self_modulate = Color(1.0,1.0,0.15) 
-		projectile.get_node("HitBox").damage = stats.actual_damage * 1.3
+		projectile.get_node("HitBox").damage = stats.damage * 1.3
 		projectile.scale = Vector2(1.2,1.2)
 	if stats.health == 1 and stats.temp_health > 0:
 		projectile.get_node("Sprite").self_modulate = Color(1.2,0.25,0.15) 
-		projectile.get_node("Stats").max_health = stats.actual_damage * 5
-		projectile.get_node("HitBox").damage = stats.actual_damage * 2.5
+		projectile.get_node("Stats").max_health = stats.damage * 5
+		projectile.get_node("HitBox").damage = stats.damage * 2.5
 		projectile.scale = Vector2(1.4,1.4)
 		projectile.get_node("Stats").life_stamp = .75
 	MainScene.main.get_node("YSort/Enemies").add_child(projectile)
@@ -263,7 +264,7 @@ func sp_signal(type):
 			stats.double_power = false
 
 func no_health():
-	var die = true
+	die = true
 	var slot = 0
 	var item
 	while slot < 29 and die == true:
@@ -289,14 +290,15 @@ func no_health():
 		_tween.interpolate_property(_death_effect, "color", Color(0,0,0,0), Color(1,0,0,1), .5, Tween.TRANS_LINEAR)
 		_tween.interpolate_property(_death_effect, "color", Color(1,0,0,1), Color(0,0,0,1), .5, Tween.TRANS_LINEAR, 0.8)
 		_tween.start()
-		hurtBox.start_invincibility(2.0)
+		hurtBox.get_node("Timer").stop()
+		hurtBox.start_invincibility(5.0)
 		yield(hurtBox.get_node("Timer"), "timeout")
 		var _transition_rect = MainScene.main.get_node("CanvasLayer/SceneTransitionRect")
 		_transition_rect.transition()
 		yield(_transition_rect,"animation_finished")
 		SceneChanger.goto_scene("res://Maps/GameOver.tscn", MainScene.main)
 	else:
-		hurtBox.start_invincibility(3.0)
+		hurtBox.start_invincibility(5.0)
 		PlayerInventory.dec_in_slot(slot)
 
 func health_changed(type, amount):
@@ -314,6 +316,14 @@ func set_stamina_bar_style(value):
 			staminaCircle.visible = false
 			staminaBar.visible = true
 
+func count_enemies():
+	var count = 0
+	var enemies = $CombarChecker.get_overlapping_bodies()
+	for enemy in enemies:
+		if enemy.state == enemy.CHASE or enemy.state == enemy.SEARCH:
+			count += 1
+	return count
+
 func in_combat_check():
 	var inCombat = false
 	var enemies = $CombarChecker.get_overlapping_bodies()
@@ -324,7 +334,7 @@ func in_combat_check():
 	return inCombat
 
 func _on_HurtBox_area_entered(area):
-	if area.damage > 0:
+	if area.damage > 0 and die == false:
 		var damage = area.damage
 		if stats.temp_health > 0:
 			stats.temp_health -= clamp(damage - stats.defence, 0, damage)

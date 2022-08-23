@@ -215,7 +215,7 @@ gdinv/RecursiveLoad=true
 config/name="ActionRPGProject"
 run/main_scene="res://Maps/MainMenu.tscn"
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
-config/icon="res://Textures/icons/icon_v1.png"
+config/icon="res://Theme stuff/icon.png"
 
 [autoload]
 

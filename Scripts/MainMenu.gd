@@ -25,10 +25,34 @@ func _select_game(slot):
 	if SaveGame.save_file_data[slot] == "null":  
 		SaveGame.create_file(slot)
 		_grab_saves()
-	if SaveGame.save_file_data[slot] == "working":
+	elif SaveGame.save_file_data[slot] == "working":
+		PlayerInventory.clear()
+		PlayerArmorInventory.clear()
+		saves.get_focus_owner().release_focus()
 		var data = SaveGame.load_data(slot)
 		for d in SaveGame.data_template.size():
 			PlayerStats.set(SaveGame.data_template[d],data.get(SaveGame.data_template[d]))
+		for i in range(0, PlayerInventory.MaxStacks):
+# warning-ignore:return_value_discarded
+			if data.get("inventory")[i] == [null,null] or data.get("inventory")[i] == null: PlayerInventory.add_item_by_id("temp",1)
+			else:
+# warning-ignore:return_value_discarded
+				PlayerInventory.add_item_by_id(data.get("inventory")[i][0], data.get("inventory")[i][1])
+		for i in range(0, PlayerArmorInventory.MaxStacks):
+# warning-ignore:return_value_discarded
+			if data.get("armor_inventory")[i] == [null,null] or data.get("armor_inventory")[i] == null: PlayerArmorInventory.add_item_by_id("temp",1)
+			else:
+# warning-ignore:return_value_discarded
+				PlayerArmorInventory.add_item_by_id(data.get("armor_inventory")[i][0], data.get("armor_inventory")[i][1])
+		for i in range(0, PlayerInventory.MaxStacks):
+			var _item = PlayerInventory.at_slot(i)
+# warning-ignore:return_value_discarded
+			if _item.item.identifier == "temp": PlayerInventory.remove_item_by_id("temp")
+		for i in range(0, PlayerArmorInventory.MaxStacks):
+			var _item = PlayerArmorInventory.at_slot(i)
+# warning-ignore:return_value_discarded
+			if _item.item.identifier == "temp": PlayerArmorInventory.remove_item_by_id("temp")
+		
 		PlayerStats.stamina = PlayerStats.max_stamina
 		SaveGame.current_save_data_id = slot
 		print(data)

@@ -9,7 +9,6 @@ func _ready():
 	load("res://Preload/debug_interface.tscn")
 	PlayerStats.sp_on = false
 	Music.SetGameState("Loading")
-	PlayerStats.already_signaled = false
 
 func _on_SaveAndContinue_pressed():
 	_save()

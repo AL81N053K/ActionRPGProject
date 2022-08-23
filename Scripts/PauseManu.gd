@@ -11,6 +11,12 @@ func _ready():
 	GlobalSettings.connect("blur_effect",self,"set_blur")
 	settings_menu.connect("closing",self,"_options_closing")
 
+func _input(_event):
+#	$DEBUG.set_visible(Save.game_data.experimental)
+	var player = MainScene.main.get_node_or_null("YSort/Player")
+	if player != null:
+		$DEBUG.text = str("Enemy alerted: ",player.count_enemies())
+
 func set_blur(value):
 	$Blur.material.set_shader_param("amount", value * 0.25)
 
@@ -68,6 +74,14 @@ func _on_Save_pressed():
 		SaveGame.current_save_data.equiped_sp = PlayerStats.equiped_sp
 		SaveGame.current_save_data.location = PlayerStats.location
 		SaveGame.current_save_data.position = PlayerStats.position
+		for i in range(0, PlayerInventory.MaxStacks):
+			var _item = PlayerInventory.at_slot(i)
+			if _item != null: SaveGame.current_save_data.inventory[i] = [_item.item.identifier,_item.stackSize]
+			if _item == null: SaveGame.current_save_data.inventory[i] = null
+		for i in range(0, PlayerArmorInventory.MaxStacks):
+			var _item = PlayerArmorInventory.at_slot(i)
+			if _item != null: SaveGame.current_save_data.armor_inventory[i] = [_item.item.identifier,_item.stackSize]
+			if _item == null: SaveGame.current_save_data.armor_inventory[i] = null
 		SaveGame.save_data(SaveGame.current_save_data_id)
 
 func game_saved():

@@ -53,50 +53,50 @@ func set_blur(value):
 
 func _process(_delta):
 	var speed_stat = stats.default_speed + stats.speed_add
+	statsLabel.text = str("Level: ",stats.level,"\n",stats.base_damage+stats.weapon_damage,"(",stats.base_damage,") Damage\n",speed_stat," (", speed_stat*1.4,") Speed\n",stats.defence," Defence\n", stats.attack_speed, " Attack Speed")
 	set_text()
 	set_armor_text()
-	statsLabel.text = str("Level: ",stats.level,"\n",stats.damage," Damage\n",speed_stat," (", speed_stat*1.4,") Speed\n",stats.defence," Defence\n", stats.attack_speed, " Attack Speed")
+	set_armor_stats()
 	
-	if visible == true and $TabContainer.current_tab == 0:
-		if Input.is_action_just_pressed("ui_up") and index > 0:
-			index -= 6
-			if index < 0:
-				index = 0
-			$AudioStreamPlayer.play(0.0)
-		if Input.is_action_just_pressed("ui_down") and index < 29:
-			index += 6
-			if index > 29:
-				index = 29
-			$AudioStreamPlayer.play(0.0)
-		if Input.is_action_just_pressed("ui_left") and index > 0:
-			index -= 1
-			$AudioStreamPlayer.play(0.0)
-		if Input.is_action_just_pressed("ui_right") and index < 29:
-			index += 1
-			$AudioStreamPlayer.play(0.0)
-		if Input.is_action_pressed("accept"):
-			hold_cooldown += 1
-			if hold_cooldown == 2 or hold_cooldown > 60:
-				var item = playerInventory.at_slot(index)
-				if item != null:
-					use_item(item)
-			if hold_cooldown > 60: hold_cooldown -= 5
-		if not Input.is_action_pressed("accept"):
-			hold_cooldown = 0
-	if visible == true and $TabContainer.current_tab == 1:
-		if Input.is_action_just_pressed("ui_up") and armor_index > 0:
-			armor_index -= 1
-			$AudioStreamPlayer.play(0.0)
-		if Input.is_action_just_pressed("ui_down") and armor_index < 4:
-			armor_index += 1
-			$AudioStreamPlayer.play(0.0)
-	
-	
-	if Input.is_action_just_pressed("change_btab") and $TabContainer.current_tab > 0:
-		$TabContainer.current_tab -= 1
-	if Input.is_action_just_pressed("change_tab") and $TabContainer.current_tab < $TabContainer.get_tab_count() - 1:
-		$TabContainer.current_tab += 1
-	
+	if visible == true and get_parent().get_node("Console").visible == false: 
+		if $TabContainer.current_tab == 0:
+			if Input.is_action_just_pressed("ui_up") and index > 0:
+				index -= 6
+				if index < 0:
+					index = 0
+				$AudioStreamPlayer.play(0.0)
+			if Input.is_action_just_pressed("ui_down") and index < 29:
+				index += 6
+				if index > 29:
+					index = 29
+				$AudioStreamPlayer.play(0.0)
+			if Input.is_action_just_pressed("ui_left") and index > 0:
+				index -= 1
+				$AudioStreamPlayer.play(0.0)
+			if Input.is_action_just_pressed("ui_right") and index < 29:
+				index += 1
+				$AudioStreamPlayer.play(0.0)
+			if Input.is_action_pressed("accept"):
+				hold_cooldown += 1
+				if hold_cooldown == 2 or hold_cooldown > 60:
+					var item = playerInventory.at_slot(index)
+					if item != null:
+						use_item(item)
+				if hold_cooldown > 60: hold_cooldown -= 3
+			if Input.is_action_just_released("accept"):
+				hold_cooldown = 0
+		if $TabContainer.current_tab == 1:
+			if Input.is_action_just_pressed("ui_up") and armor_index > 0:
+				armor_index -= 1
+				$AudioStreamPlayer.play(0.0)
+			if Input.is_action_just_pressed("ui_down") and armor_index < 4:
+				armor_index += 1
+				$AudioStreamPlayer.play(0.0)
+		
+		if Input.is_action_just_pressed("change_btab") and $TabContainer.current_tab > 0:
+			$TabContainer.current_tab -= 1
+		if Input.is_action_just_pressed("change_tab") and $TabContainer.current_tab < $TabContainer.get_tab_count() - 1:
+			$TabContainer.current_tab += 1
 
 func use_item(item):
 	match item.item.attributes.type:
@@ -122,18 +122,32 @@ func use_item(item):
 				give_item(values.id,values.quantity)
 				kit.push_back(values)
 		"melee_weapon":
-			var weapon_slot = playerArmorInventory.at_slot(4)
-			var weapon_item
-			playerInventory.dec_in_slot(index)
-			if weapon_slot != null:
-				weapon_item = weapon_slot.item.identifier
-				give_item(weapon_item, 1)
-			playerArmorInventory.dec_in_slot(4)
-			_temps(4)
-			playerArmorInventory.add_item_by_id(item.item.identifier,1)
-			_remove_temps(4)
+			_item_check(4,index,item)
+		"armor":
+			var placement = item.item.attributes.placement
+			match placement:
+				"head":
+					_item_check(0,index, item)
+				"chest":
+					_item_check(1,index, item)
+				"legs":
+					_item_check(2,index, item)
+				"feet":
+					_item_check(3,index, item)
 		_:
 			pass
+
+func _item_check(a_index, i_index, item):
+	var slot = playerArmorInventory.at_slot(a_index)
+	var a_item
+	playerInventory.dec_in_slot(i_index)
+	if slot != null:
+		a_item = slot.item.identifier
+		give_item(a_item, 1)
+	playerArmorInventory.dec_in_slot(a_index)
+	_temps(a_index)
+	playerArmorInventory.add_item_by_id(item.item.identifier,1)
+	_remove_temps(a_index)
 
 func _temps(_max):
 	for i in range(0,_max):
@@ -233,6 +247,17 @@ func set_armor_text():
 				selectedArmorItem.text = ""
 			else:
 				armor_slots.get_node(slot).set('custom_styles/panel',slot_empty_unsel)
+
+func set_armor_stats():
+	var _armor = [0,0,0,0,0]
+	for i in range (0, playerArmorInventory.MaxStacks):
+		var test = playerArmorInventory.at_slot(i)
+		if test != null:
+			if test.item.identifier != "temp":
+				if i != 4: _armor[i] = test.item.attributes.defence
+				if i == 4: _armor[4] = test.item.attributes.meleeDamage.max
+	PlayerStats.armor_defence = _armor[0] + _armor[1] + _armor[2] + _armor[3]
+	PlayerStats.weapon_damage = _armor[4]
 
 func match_rarity(sprite, rarity):
 	match rarity:

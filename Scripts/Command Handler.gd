@@ -24,6 +24,7 @@ const valid_cmd = [
 	["set_dummy_frames",[ARG_FLOAT], "[time]"],
 	["set_rune",[ARG_INT], "[id]"],
 	["challenge", [ARG_STRING], "[challenge]"],
+	["give_all_items", [], "[]"],
 ]
 
 onready var item_base = preload("res://Nodes/Instances/Item.tscn")
@@ -31,7 +32,7 @@ onready var item_base = preload("res://Nodes/Instances/Item.tscn")
 func _ready():
 	valid_cmd[0].sort()
 
-func commands():
+func help():
 	var temp:String = "\n"
 	for i in valid_cmd.size():
 		temp += str(valid_cmd[i][0]," ",valid_cmd[i][2],"\n")
@@ -168,15 +169,15 @@ func clear_inventory():
 	PlayerInventory.clear()
 	return "Player's inventory has been cleared"
 
-func spawn_item(id, quantity):
+func spawn_item(id, quantity, pos_x = MainScene.main.get_node("YSort/Player").position.x, pos_y = MainScene.main.get_node("YSort/Player").position.y):
 	var item_instance = item_base.instance()
 	var item_def = GDInv_ItemDB.get_item_by_id(id)
 	if item_def == null: return str('Item of an id "',id,'" doesn\'t exist')
 	item_instance.id = id
 	item_instance.quantity = int(quantity)
 	MainScene.main.get_node("YSort/Items").add_child(item_instance)
-	item_instance.position.x = MainScene.main.get_node("YSort/Player").position.x
-	item_instance.position.y = MainScene.main.get_node("YSort/Player").position.y
+	item_instance.position.x = pos_x
+	item_instance.position.y = pos_y
 
 func get_item_list(search):
 	var registry = GDInv_ItemDB.REGISTRY
@@ -258,3 +259,12 @@ func challenge(challenge):
 			return str("Challenge 1 HP started.")
 		_:
 			return str("Challenge \"",challenge,"\" doesn't exist.")
+
+func give_all_items():
+	var items = GDInv_ItemDB.REGISTRY.keys()
+	var text = ""
+	for r in range(2, GDInv_ItemDB.REGISTRY.size()):
+		give_item(str(items[r]),1)
+		text += str(items[r],",")
+		if r % 5 == 0: text += "\n"
+	return str("All items have been spawned:\n",text)

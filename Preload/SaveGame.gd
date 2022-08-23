@@ -13,15 +13,17 @@ var current_save_data = {
 	"sp": 50,
 	"level": 1,
 	"experience": 0,
-	"damage": 4,
-	"defence": 0,
+	"base_damage": 4,
+	"base_defence": 0,
 	"attack_speed": 50,
 	"default_speed": 110,
 	"speed_add": 0,
 	"money": 0,
 	"equiped_sp": 0,
 	"location": "TestingMap",
-	"position": Vector2(0,0)
+	"position": Vector2(0,0),
+	"inventory": [],
+	"armor_inventory": []
 }
 var save_file_data = ["","","",""]
 var data_template = [
@@ -36,15 +38,17 @@ var data_template = [
 	"sp",
 	"level",
 	"experience",
-	"damage",
-	"defence",
+	"base_damage",
+	"base_defence",
 	"attack_speed",
 	"default_speed",
 	"speed_add",
 	"money",
 	"equiped_sp",
 	"location",
-	"position"
+	"position",
+	"inventory",
+	"armor_inventory"
 ]
 var to_save = {
 	"max_health": 20,
@@ -58,15 +62,17 @@ var to_save = {
 	"sp": 50,
 	"level": 1,
 	"experience": 0,
-	"damage": 5,
-	"defence": 0,
+	"base_damage": 5,
+	"base_defence": 0,
 	"attack_speed": 50,
 	"default_speed": 110,
 	"speed_add": 0,
 	"money": 0,
 	"equiped_sp": 0,
 	"location": "TestingMap",
-	"position": Vector2(0,0)
+	"position": Vector2(0,0),
+	"inventory": [[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null]],
+	"armor_inventory": [[null,null],[null,null],[null,null],[null,null],[null,null]]
 }
 
 signal game_saved

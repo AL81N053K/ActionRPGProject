@@ -1,7 +1,7 @@
 extends Node
 
 const PlayerLevelUp = preload("res://Nodes/Instances/PlayerLevelUp.tscn")
-
+# Health, Mana, Stamina, Special Power
 var max_health: int = 1
 var health: int = max_health setget set_health
 var max_temp_health: int = 0
@@ -12,14 +12,22 @@ var max_stamina: int = 1
 var stamina: float = max_stamina setget set_stamina
 var max_sp: int = 1
 var sp: float = max_sp setget set_sp
-var damage: int = 1
-var actual_damage: int = 1
+# Damage
+var damage: int = 0
+var weapon_damage: int = 0
+var base_damage: int = 1 
+# Speed
 var default_speed: int = 110
 var speed_add: int = 0
+# Defence
 var defence: int = 0
+var armor_defence: int = 0 
+var base_defence: int = 0 
+
 var max_exp: int = 80
 var experience: int = 0
 var level: int = 1
+
 var camera_limit: bool = true
 var hp_precent: float = 1.0
 var no_dying: bool = false
@@ -32,7 +40,6 @@ var position: Vector2 = Vector2.ZERO
 var dummy_frames := 0.3
 
 signal no_health
-var already_signaled = false
 signal no_stamina
 signal stamina_refilled
 signal level_up
@@ -76,9 +83,8 @@ func set_health(value):
 	if temp_health > max_temp_health: temp_health = max_temp_health
 	health = value
 	emit_signal("health_changed", type, amount)
-	if health <= 0 and no_dying == false and already_signaled == false:
+	if health <= 0 and no_dying == false:
 		emit_signal("no_health")
-		already_signaled = true
 
 func set_mana(value):
 	mana = value
@@ -93,16 +99,24 @@ func set_stamina(value):
 	if stamina >= max_stamina:
 		emit_signal("stamina_refilled")
 
+func _input(event):
+	if event.is_action_pressed("special_ability") and sp > 0 and get_tree().paused == false: 
+		sp_on = not sp_on
+
 # warning-ignore:unused_argument
 func _process(delta):
 	if dummy_frames <= 0: dummy_frames = 0.001
 	
-	hp_precent = stepify(float(health) / max_health * 1.0,0.01)
+	if double_power: damage = (base_damage + weapon_damage) * 2
+	else: damage = base_damage + weapon_damage
+	defence = base_defence + armor_defence
 	
 	if health > max_health: health = max_health
 	if mana > max_mana: mana = max_mana
 	if stamina > max_stamina: stamina = max_stamina
 	if sp > max_sp: sp = max_sp
+	
+	hp_precent = stepify(float(health) / max_health * 1.0,0.01)
 	
 	if level <= 10:
 		max_exp = 28 * int(level * 1.09)
@@ -117,8 +131,6 @@ func _process(delta):
 	if level >= 100:
 		max_exp = int(162 + (level * 2.8 * harderer)) * int(level * 3.5)
 	
-	if Input.is_action_just_pressed("special_ability") and sp > 0 and get_tree().paused == false: 
-		sp_on = not sp_on
 	if sp <= 0: sp_on = false
 	
 	if sp_on == true:
@@ -151,11 +163,11 @@ func _process(delta):
 		if level % 2 == 0 and level < 31:
 			default_speed += 4
 		if level % 7 == 0:
-			defence += 1
+			base_defence += 1
 		if level % 8 == 0:
 			max_temp_health += 5
 		if level % 2 != 0 and level % 3 != 0:
-			damage += 1
+			base_damage += 1
 		if level < 41: 
 			max_stamina += 5
 		health = max_health
@@ -170,9 +182,6 @@ func _process(delta):
 		var playerLevelUp = PlayerLevelUp.instance()
 		if self.has_node("PlayerLevelUp") == false:
 			self.add_child(playerLevelUp)
-	
-	if double_power: actual_damage = damage * 2
-	else: actual_damage = damage
 	
 	match challenge:
 		"1_hp":

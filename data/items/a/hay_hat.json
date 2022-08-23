@@ -1,0 +1,12 @@
+{
+    "id": "hay_hat",
+    "attributes": {
+        "name": "Hay Hat",
+        "description": "Hat made out of hay, or at least it looks like it.",
+        "maxStackSize": 1,
+        "type": "armor",
+        "rarity": "COMMON",
+        "defence": 1,
+        "placement": "head"
+    }
+}

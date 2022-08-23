@@ -1,6 +1,7 @@
 {
 	"id": "temp",
 	"attributes": {
+		"name":"temp",
 		"maxStackSize": 1,
 	}
 }

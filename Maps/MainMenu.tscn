@@ -8,7 +8,7 @@
 [ext_resource path="res://Shader/HQ4X.gdshader" type="Shader" id=6]
 [ext_resource path="res://Theme stuff/main_theme.tres" type="Theme" id=7]
 [ext_resource path="res://Sprites/animated_particles/smal_animated_star.tres" type="Texture" id=8]
-[ext_resource path="res://Textures/icons/icon_v1_big.png" type="Texture" id=9]
+[ext_resource path="res://Theme stuff/icon.png" type="Texture" id=9]
 [ext_resource path="res://Nodes/UI/MainMenuPanel.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ShaderMaterial" id=4]
@@ -115,8 +115,8 @@ anims/main = SubResource( 3 )
 [node name="TempIcon" type="TextureRect" parent="CanvasLayer"]
 margin_left = 20.0
 margin_top = 20.0
-margin_right = 40.0
-margin_bottom = 40.0
+margin_right = 199.0
+margin_bottom = 199.0
 texture = ExtResource( 9 )
 
 [node name="Buttons" type="VBoxContainer" parent="CanvasLayer"]

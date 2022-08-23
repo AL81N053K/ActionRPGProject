@@ -167,7 +167,8 @@ alignment = 2
 margin_top = 202.0
 margin_right = 224.0
 margin_bottom = 216.0
-focus_neighbour_top = NodePath("../SaveAndQuit")
+focus_neighbour_top = NodePath("../JustQuit")
+focus_neighbour_bottom = NodePath("../SaveAndQuit")
 theme = ExtResource( 7 )
 text = "Save and Continue"
 
@@ -175,7 +176,8 @@ text = "Save and Continue"
 margin_top = 224.0
 margin_right = 224.0
 margin_bottom = 238.0
-focus_neighbour_bottom = NodePath("../SaveAndContinue")
+focus_neighbour_top = NodePath("../SaveAndContinue")
+focus_neighbour_bottom = NodePath("../JustQuit")
 theme = ExtResource( 7 )
 text = "Save and Return to Main Menu"
 
@@ -183,6 +185,7 @@ text = "Save and Return to Main Menu"
 margin_top = 246.0
 margin_right = 224.0
 margin_bottom = 260.0
+focus_neighbour_top = NodePath("../SaveAndQuit")
 focus_neighbour_bottom = NodePath("../SaveAndContinue")
 theme = ExtResource( 7 )
 text = "Return to Main Menu"

@@ -1,7 +1,7 @@
 {
 	"id": "healing_area",
 	"attributes": {
-		"name": "Pocket Healing Mashine",
+		"name": "Pocket Healing Machine",
 		"description": "Portable healing station. Heals health in it's radius.",
 		"maxStackSize": 5,
 		"type": "utility",

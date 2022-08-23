@@ -40,13 +40,13 @@ func ChangeMusic():
 	match game_state:
 		"NewGame":
 			bg_music_mm._set_playing(true)
-			make_tween("mm","volume_db",bg_music_mm.volume_db, -20, 2, Tween.TRANS_QUART, Tween.EASE_OUT)
+			make_tween("mm","volume_db",bg_music_mm.volume_db, -15, 2, Tween.TRANS_QUART, Tween.EASE_OUT)
 		"MainMenu":
 			tween_mm.remove_all()
 			tween_n.remove_all()
 			tween_c.remove_all()
 			bg_music_mm._set_playing(true)
-			make_tween("mm","volume_db",bg_music_mm.volume_db, -20, 2, Tween.TRANS_QUART, Tween.EASE_OUT)
+			make_tween("mm","volume_db",bg_music_mm.volume_db, -15, 2, Tween.TRANS_QUART, Tween.EASE_OUT)
 			make_tween("n","volume_db",bg_music_n.volume_db, -60, .5, Tween.TRANS_LINEAR, Tween.EASE_OUT)
 			make_tween("c","volume_db",bg_music_c.volume_db, -60, .5, Tween.TRANS_LINEAR, Tween.EASE_OUT)
 		"Loading":
@@ -61,13 +61,13 @@ func ChangeMusic():
 			tween_c.remove_all()
 			make_tween("combat","volume_db",bg_music_c.volume_db, -60, 3, Tween.TRANS_LINEAR, Tween.EASE_OUT)
 			if not bg_music_n.is_playing(): bg_music_n._set_playing(true)
-			make_tween("normal","volume_db",bg_music_n.volume_db, -20, 2, Tween.TRANS_QUART, Tween.EASE_IN, 1)
+			make_tween("normal","volume_db",bg_music_n.volume_db, -15, 2, Tween.TRANS_QUART, Tween.EASE_IN, 1)
 		"Combat":
 			tween_n.remove_all()
 			tween_c.remove_all()
 			make_tween("normal","volume_db",bg_music_n.volume_db, -60, .8, Tween.TRANS_QUART, Tween.EASE_OUT)
 			if not bg_music_c.is_playing(): bg_music_c._set_playing(true)
-			make_tween("combat","volume_db",bg_music_c.volume_db, -20, .5, Tween.TRANS_LINEAR, Tween.EASE_IN)
+			make_tween("combat","volume_db",bg_music_c.volume_db, -15, .5, Tween.TRANS_LINEAR, Tween.EASE_IN)
 			CheckCombat()
 
 func CheckCombat():

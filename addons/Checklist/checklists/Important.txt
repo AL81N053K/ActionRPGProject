@@ -1,4 +1,13 @@
 Create name for the Game
+I|1
+L|Ideas:
+Fallen Destiny
+Hero of Oracles
+Fallenage
+Furline
+Fur of Love (joke)
+Furvale
+I|=0
 Create logo and icons
 L|Plot
 I|1

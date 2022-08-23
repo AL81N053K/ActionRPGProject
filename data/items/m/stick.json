@@ -2,6 +2,7 @@
     "id": "stick",
     "attributes": {
         "name": "Stick",
+		"description": "Fallen stick from a tree.",
         "maxStackSize": 999,
         "type": "material",
         "rarity": "COMMON"
