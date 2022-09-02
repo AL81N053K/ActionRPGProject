@@ -43,8 +43,8 @@ func _save():
 	SaveGame.current_save_data.speed_add = PlayerStats.speed_add
 	SaveGame.current_save_data.money = PlayerStats.money
 	SaveGame.current_save_data.equiped_sp = PlayerStats.equiped_sp
+	SaveGame.current_save_data.mana = PlayerStats.mana
+	SaveGame.current_save_data.sp = PlayerStats.sp
 	SaveGame.save_data(SaveGame.current_save_data_id)
 	PlayerStats.set_health(SaveGame.current_save_data.health)
-	PlayerStats.set_mana(SaveGame.current_save_data.mana)
-	PlayerStats.set_sp(SaveGame.current_save_data.sp)
 	PlayerStats.stamina = PlayerStats.max_stamina

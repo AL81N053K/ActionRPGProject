@@ -22,8 +22,8 @@ var current_save_data = {
 	"equiped_sp": 0,
 	"location": "TestingMap",
 	"position": Vector2(0,0),
-	"inventory": [],
-	"armor_inventory": []
+	"inventory": [[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null]],
+	"armor_inventory": [[null,null],[null,null],[null,null],[null,null],[null,null]]
 }
 var save_file_data = ["","","",""]
 var data_template = [
