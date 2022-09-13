@@ -293,9 +293,8 @@ func no_health():
 		hurtBox.get_node("Timer").stop()
 		hurtBox.start_invincibility(5.0)
 		yield(hurtBox.get_node("Timer"), "timeout")
-		var _transition_rect = MainScene.main.get_node("CanvasLayer/SceneTransitionRect")
-		_transition_rect.transition()
-		yield(_transition_rect,"animation_finished")
+		SceneTransitionRect.transition()
+		yield(SceneTransitionRect,"animation_finished")
 		SceneChanger.goto_scene("res://Maps/GameOver.tscn", MainScene.main)
 	else:
 		hurtBox.start_invincibility(5.0)

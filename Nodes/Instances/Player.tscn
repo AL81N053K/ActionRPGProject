@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=2]
+[gd_scene load_steps=77 format=2]
 
 [ext_resource path="res://Action RPG Resources/Shadows/MediumShadow.png" type="Texture" id=1]
 [ext_resource path="res://Action RPG Resources/Music and Sounds/Swipe.wav" type="AudioStream" id=2]
@@ -16,7 +16,6 @@
 [ext_resource path="res://Sprites/playerUI/stamina_under_bar.png" type="Texture" id=14]
 [ext_resource path="res://Sprites/playerUI/stamina_progress_bar.png" type="Texture" id=15]
 [ext_resource path="res://Sprites/playerUI/stamina_under_circle.png" type="Texture" id=16]
-[ext_resource path="res://addons/smoothing/smoothing_2d.gd" type="Script" id=17]
 
 [sub_resource type="AnimationNodeAnimation" id=3]
 animation = "IdleDown"
@@ -51,7 +50,7 @@ nodes/BlendSpace/node = SubResource( 7 )
 nodes/BlendSpace/position = Vector2( -140, 120 )
 nodes/TimeScale/node = SubResource( 8 )
 nodes/TimeScale/position = Vector2( 100, 120 )
-node_connections = [ "TimeScale", 0, "BlendSpace", "output", 0, "TimeScale" ]
+node_connections = [ "output", 0, "TimeScale", "TimeScale", 0, "BlendSpace" ]
 
 [sub_resource type="AnimationNodeAnimation" id=10]
 animation = "RollDown"
@@ -86,7 +85,7 @@ nodes/BlendSpace/node = SubResource( 14 )
 nodes/BlendSpace/position = Vector2( -140, 120 )
 nodes/TimeScale/node = SubResource( 15 )
 nodes/TimeScale/position = Vector2( 100, 140 )
-node_connections = [ "TimeScale", 0, "BlendSpace", "output", 0, "TimeScale" ]
+node_connections = [ "output", 0, "TimeScale", "TimeScale", 0, "BlendSpace" ]
 
 [sub_resource type="AnimationNodeAnimation" id=17]
 animation = "SwordDown"
@@ -122,7 +121,7 @@ nodes/BlendSpace/position = Vector2( -90, 178 )
 nodes/TimeScale/node = SubResource( 22 )
 nodes/TimeScale/position = Vector2( 137, 148 )
 nodes/output/position = Vector2( 360, 140 )
-node_connections = [ "TimeScale", 0, "BlendSpace", "output", 0, "TimeScale" ]
+node_connections = [ "output", 0, "TimeScale", "TimeScale", 0, "BlendSpace" ]
 
 [sub_resource type="AnimationNodeAnimation" id=24]
 animation = "WalkDown"
@@ -157,7 +156,7 @@ nodes/BlendSpace/position = Vector2( 380, 60 )
 nodes/TimeScale/node = SubResource( 29 )
 nodes/TimeScale/position = Vector2( 680, 80 )
 nodes/output/position = Vector2( 920, 120 )
-node_connections = [ "TimeScale", 0, "BlendSpace", "output", 0, "TimeScale" ]
+node_connections = [ "output", 0, "TimeScale", "TimeScale", 0, "BlendSpace" ]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=31]
 
@@ -1006,7 +1005,7 @@ material = SubResource( 1 )
 position = Vector2( 0, -9 )
 texture = ExtResource( 5 )
 hframes = 60
-frame = 45
+frame = 36
 
 [node name="Tween" type="Tween" parent="PlayerSprite"]
 
@@ -1144,11 +1143,6 @@ value = 100.0
 texture_progress = ExtResource( 15 )
 fill_mode = 6
 tint_progress = Color( 0, 1, 0.282353, 1 )
-
-[node name="Smoothing2D" type="Node2D" parent="."]
-script = ExtResource( 17 )
-target = NodePath("..")
-flags = 63
 
 [connection signal="timeout" from="GhostTimer" to="." method="_on_GhostTimer_timeout"]
 [connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]

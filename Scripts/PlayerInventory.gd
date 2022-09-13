@@ -53,7 +53,7 @@ func set_blur(value):
 
 func _process(_delta):
 	var speed_stat = stats.default_speed + stats.speed_add
-	statsLabel.text = str("Level: ",stats.level,"\n",stats.base_damage+stats.weapon_damage,"(",stats.base_damage,") Damage\n",speed_stat," (", speed_stat*1.4,") Speed\n",stats.defence," Defence\n", stats.attack_speed, " Attack Speed")
+	statsLabel.text = str("Level: ",stats.level,"\n",stats.damage,"(",stats.base_damage,") Damage\n",speed_stat," (", speed_stat*1.4,") Speed\n",stats.defence,"(",stats.base_defence,")"," Defence\n", stats.attack_speed, " Attack Speed")
 	set_text()
 	set_armor_text()
 	set_armor_stats()

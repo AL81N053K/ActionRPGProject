@@ -73,10 +73,10 @@ func set_stat(stat, value):
 			PlayerStats.sp = value
 			return str("Special Power changed to ", value,".")
 		"def","defence":
-			PlayerStats.defence = value
+			PlayerStats.base_defence = value
 			return str("Defence changed to ", value,".")
 		"dmg","damage":
-			PlayerStats.damage = value
+			PlayerStats.base_damage = value
 			return str("Damage changed to ", value,".")
 		"attack_speed","attackspeed","attspd":
 			PlayerStats.attack_speed = value

@@ -46,9 +46,8 @@ func _options_closing():
 
 func _on_Main_Menu_pressed():
 	get_tree().paused = false
-	var _transition_rect = MainScene.main.get_node("CanvasLayer/SceneTransitionRect")
-	_transition_rect.transition()
-	yield(_transition_rect,"animation_finished")
+	SceneTransitionRect.transition()
+	yield(SceneTransitionRect,"animation_finished")
 	SceneChanger.goto_scene("res://Maps/MainMenu.tscn", MainScene.main)
 	Music.SetGameState("Loading")
 

@@ -1,8 +1,7 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Preload/debug_interface.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Nodes/UI/SceneTransitionRect.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Nodes/UI/Options.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Backgrounds/mainmenu_background2.png" type="Texture" id=5]
 [ext_resource path="res://Shader/HQ4X.gdshader" type="Shader" id=6]
@@ -209,8 +208,6 @@ margin_left = 10.0
 margin_top = 10.0
 margin_right = 590.0
 margin_bottom = 328.0
-
-[node name="SceneTransitionRect" parent="CanvasLayer" instance=ExtResource( 3 )]
 
 [connection signal="pressed" from="CanvasLayer/Buttons/Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="CanvasLayer/Buttons/Options" to="." method="_on_Options_pressed"]

@@ -170,9 +170,9 @@ func _process(delta):
 			base_damage += 1
 		if level < 41: 
 			max_stamina += 5
-		health = max_health
-		mana = max_mana
-		stamina = max_stamina
+		set_health(max_health)
+		set_mana(max_mana)
+		set_stamina(max_stamina)
 		if level > 999:
 			harderer += 0.05
 		if level > 1999:

@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scripts/GameOver.gd" type="Script" id=1]
 [ext_resource path="res://Preload/debug_interface.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Nodes/UI/SceneTransitionRect.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Preload/SceneTransitionRect.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Backgrounds/gameover-background.png" type="Texture" id=5]
 [ext_resource path="res://Shader/HQ4X.gdshader" type="Shader" id=6]
 [ext_resource path="res://Theme stuff/main_theme.tres" type="Theme" id=7]

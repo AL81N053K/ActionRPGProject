@@ -1,6 +1,5 @@
 extends Node2D
 
-onready var _transition_rect := $CanvasLayer/SceneTransitionRect
 onready var settings_menu = $CanvasLayer/Options
 onready var tween = $CanvasLayer/Tween
 onready var buttons = $CanvasLayer/Buttons
@@ -15,6 +14,7 @@ func _ready():
 	MainScene.setName(name)
 	buttons.show()
 	saves.hide()
+	SceneTransitionRect.transition_backwards()
 	make_tween(buttons,"rect_position",Vector2(-50.0,10.0),Vector2(10.0,10.0),1.5,Tween.TRANS_QUAD,Tween.EASE_OUT,2)
 	make_tween(buttons,"modulate",Color(1,1,1,0),Color(1,1,1,1),1,Tween.TRANS_SINE,Tween.EASE_IN_OUT,2.5)
 	tween.start()
@@ -56,8 +56,8 @@ func _select_game(slot):
 		PlayerStats.stamina = PlayerStats.max_stamina
 		SaveGame.current_save_data_id = slot
 		print(data)
-		_transition_rect.transition()
-		yield(_transition_rect,"animation_finished")
+		SceneTransitionRect.transition()
+		yield(SceneTransitionRect,"animation_finished")
 		SceneChanger.goto_scene(str("res://Maps/",data.get("location"),".tscn"), self)
 		Music.SetGameState("Loading")
 

@@ -16,6 +16,7 @@ func load_data():
 			"antialising": 2,
 			"vsync": true,
 			"bloom": true,
+			"blur": 2,
 			"display_fps": false,
 			"limit_fps": 0,
 			"master_vol": 0,

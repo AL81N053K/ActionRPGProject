@@ -14,6 +14,36 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/project_map/pm_common_node.gd"
 }, {
+"base": "Button",
+"class": "ControllerButton",
+"language": "GDScript",
+"path": "res://addons/controller_icons/objects/Button.gd"
+}, {
+"base": "Node",
+"class": "ControllerMapper",
+"language": "GDScript",
+"path": "res://addons/controller_icons/Mapper.gd"
+}, {
+"base": "Resource",
+"class": "ControllerSettings",
+"language": "GDScript",
+"path": "res://addons/controller_icons/Settings.gd"
+}, {
+"base": "Sprite",
+"class": "ControllerSprite",
+"language": "GDScript",
+"path": "res://addons/controller_icons/objects/Sprite.gd"
+}, {
+"base": "Sprite3D",
+"class": "ControllerSprite3D",
+"language": "GDScript",
+"path": "res://addons/controller_icons/objects/Sprite3D.gd"
+}, {
+"base": "TextureRect",
+"class": "ControllerTextureRect",
+"language": "GDScript",
+"path": "res://addons/controller_icons/objects/TextureRect.gd"
+}, {
 "base": "Reference",
 "class": "DTS",
 "language": "GDScript",
@@ -171,6 +201,12 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "CommonNode": "",
+"ControllerButton": "",
+"ControllerMapper": "",
+"ControllerSettings": "",
+"ControllerSprite": "",
+"ControllerSprite3D": "",
+"ControllerTextureRect": "",
 "DTS": "",
 "Dialogic": "",
 "DialogicAnimaPropertiesHelper": "",
@@ -232,6 +268,7 @@ PlayerInventory="*res://Preload/PlayerInventory.tscn"
 PlayerArmorInventory="*res://Preload/PlayerArmorInventory.tscn"
 GDInv_ItemDB="*res://addons/gdinv/GDInv_ItemDB.gd"
 Music="*res://Preload/Music.tscn"
+SceneTransitionRect="*res://Preload/SceneTransitionRect.tscn"
 
 [debug]
 
@@ -257,7 +294,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/Checklist/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/explore-editor-theme/plugin.cfg", "res://addons/gdinv/plugin.cfg", "res://addons/godot_editor_discord_presence/plugin.cfg", "res://addons/project_map/plugin.cfg", "res://addons/smoothing/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/Checklist/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/gdinv/plugin.cfg", "res://addons/project_map/plugin.cfg" )
 
 [gdnative]
 
