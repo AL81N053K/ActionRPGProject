@@ -50,7 +50,7 @@ nodes/BlendSpace/node = SubResource( 7 )
 nodes/BlendSpace/position = Vector2( -140, 120 )
 nodes/TimeScale/node = SubResource( 8 )
 nodes/TimeScale/position = Vector2( 100, 120 )
-node_connections = [ "output", 0, "TimeScale", "TimeScale", 0, "BlendSpace" ]
+node_connections = [ "TimeScale", 0, "BlendSpace", "output", 0, "TimeScale" ]
 
 [sub_resource type="AnimationNodeAnimation" id=10]
 animation = "RollDown"
@@ -85,7 +85,7 @@ nodes/BlendSpace/node = SubResource( 14 )
 nodes/BlendSpace/position = Vector2( -140, 120 )
 nodes/TimeScale/node = SubResource( 15 )
 nodes/TimeScale/position = Vector2( 100, 140 )
-node_connections = [ "output", 0, "TimeScale", "TimeScale", 0, "BlendSpace" ]
+node_connections = [ "TimeScale", 0, "BlendSpace", "output", 0, "TimeScale" ]
 
 [sub_resource type="AnimationNodeAnimation" id=17]
 animation = "SwordDown"
@@ -121,7 +121,7 @@ nodes/BlendSpace/position = Vector2( -90, 178 )
 nodes/TimeScale/node = SubResource( 22 )
 nodes/TimeScale/position = Vector2( 137, 148 )
 nodes/output/position = Vector2( 360, 140 )
-node_connections = [ "output", 0, "TimeScale", "TimeScale", 0, "BlendSpace" ]
+node_connections = [ "TimeScale", 0, "BlendSpace", "output", 0, "TimeScale" ]
 
 [sub_resource type="AnimationNodeAnimation" id=24]
 animation = "WalkDown"
@@ -156,7 +156,7 @@ nodes/BlendSpace/position = Vector2( 380, 60 )
 nodes/TimeScale/node = SubResource( 29 )
 nodes/TimeScale/position = Vector2( 680, 80 )
 nodes/output/position = Vector2( 920, 120 )
-node_connections = [ "output", 0, "TimeScale", "TimeScale", 0, "BlendSpace" ]
+node_connections = [ "TimeScale", 0, "BlendSpace", "output", 0, "TimeScale" ]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=31]
 
