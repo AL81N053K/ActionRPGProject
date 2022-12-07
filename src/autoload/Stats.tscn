@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/autoload/PlayerStats.gd" type="Script" id=1]
+
+[node name="Stats" type="Node"]
+pause_mode = 2
+script = ExtResource( 1 )
+
+[node name="SPTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="SPTimer" to="." method="_on_SPTimer_timeout"]

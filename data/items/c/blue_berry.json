@@ -9,7 +9,8 @@
 		"on_consume": {
 			"heal": 0,
 			"mana": 8,
-			"stamina": 0
+			"stamina": 0,
+			"temp_heal": 0
 		}
 	}
 }
