@@ -3,8 +3,8 @@ extends TextureButton
 func setup(file_name, data_text, texture, corrupted):
 	self.name = file_name
 	$Container/V/Texture.texture = check_texture(texture)
-	$Container/V/SlotName.text = str(file_name)
-	$Container/V/Data.text = data_text
+	$Container/V/V/SlotName.text = str(file_name)
+	$Container/V/V/Data.text = data_text
 	self.set_disabled(corrupted)
 
 func getFilename():

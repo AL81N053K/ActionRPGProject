@@ -18,7 +18,7 @@ func _ready():
 func random_bg():
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
-	var number = rng.randi_range(1, 4)
+	var number = rng.randi_range(1, 5)
 	$Background.texture = load(str("res://assets/textures/backgrounds/menu_pattern_",number,".png"))
 
 func start_anim():
@@ -69,16 +69,13 @@ func _grab_saves():
 	for savefile in files:
 		var s_name = savefile.replace(".sav","")
 		save_nodes.push_back(s_name)
-		print(s_name)
 		var instance = SavePanel.instance()
 		if SaveGame.check_data(s_name):
 			SaveGame.fix_save(s_name)
 		var data = SaveGame.load_data(s_name)
 		var c_data_text = str("Level: ",data.get("level"),"\nLocation:\n",data.get("location"))
 		instance.setup(s_name,c_data_text,"null",true)
-		
 		$"%SavePanels".add_child(instance)
-	print(save_nodes)
 
 func _on_Play_pressed():
 	_grab_saves()
@@ -90,9 +87,9 @@ func _on_Play_pressed():
 	saves.get_node("H/NewGame").grab_focus()
 
 func _on_Options_pressed():
-	anim_player.play("ShowOptions")
-	settings_menu._animated_show()
 	settings_menu.popup_centered()
+	settings_menu._animated_show()
+	anim_player.play("ShowOptions")
 
 func _options_close():
 	anim_player.play_backwards("ShowOptions")

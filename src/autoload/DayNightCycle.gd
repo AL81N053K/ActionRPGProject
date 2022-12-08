@@ -31,8 +31,8 @@ func _process(_delta: float) -> void:
 		minute = time * 60
 		hour = minute / 120
 
-func set_time(time):
-	$AnimationPlayer.seek(time, true)
+func set_time(Wtime):
+	$AnimationPlayer.seek(Wtime, true)
 
 func sp_effect(effect):
 	if effect == "slow_motion":

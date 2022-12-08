@@ -202,7 +202,6 @@ position = Vector2( 560, -144 )
 
 [node name="Sprite" parent="YSort/Enemies/ExpBat" index="0"]
 material = SubResource( 3 )
-frame = 0
 
 [node name="Stats" parent="YSort/Enemies/ExpBat" index="4"]
 level = 5
@@ -212,7 +211,6 @@ position = Vector2( 560, -80 )
 
 [node name="Sprite" parent="YSort/Enemies/ExpBat2" index="0"]
 material = SubResource( 4 )
-frame = 0
 
 [node name="Stats" parent="YSort/Enemies/ExpBat2" index="4"]
 level = 4
@@ -225,7 +223,6 @@ position = Vector2( 480, -272 )
 
 [node name="Sprite" parent="YSort/Enemies/ExpBat4" index="0"]
 material = SubResource( 5 )
-frame = 0
 
 [node name="Stats" parent="YSort/Enemies/ExpBat4" index="4"]
 level = 15
@@ -247,7 +244,7 @@ position = Vector2( 952, -192 )
 
 [node name="Sprite" parent="YSort/Enemies/RageBat3" index="0"]
 material = SubResource( 6 )
-frame = 1
+frame = 2
 
 [node name="Stats" parent="YSort/Enemies/RageBat3" index="4"]
 level = 25
@@ -266,7 +263,7 @@ position = Vector2( 1088, 224 )
 
 [node name="Sprite" parent="YSort/Enemies/BigBat3" index="0"]
 material = SubResource( 7 )
-frame = 2
+frame = 3
 
 [node name="Stats" parent="YSort/Enemies/BigBat3" index="4"]
 level = 50
@@ -276,7 +273,7 @@ position = Vector2( 976, 256 )
 
 [node name="Sprite" parent="YSort/Enemies/BigBat4" index="0"]
 material = SubResource( 8 )
-frame = 2
+frame = 3
 
 [node name="Stats" parent="YSort/Enemies/BigBat4" index="4"]
 level = 50
@@ -287,7 +284,6 @@ scale = Vector2( 1.3, 1.3 )
 
 [node name="Sprite" parent="YSort/Enemies/ExpBat5" index="0"]
 material = SubResource( 9 )
-frame = 0
 
 [node name="Stats" parent="YSort/Enemies/ExpBat5" index="4"]
 max_health = 45
@@ -299,7 +295,7 @@ position = Vector2( 1040, 552 )
 
 [node name="Sprite" parent="YSort/Enemies/Bat" index="0"]
 material = SubResource( 10 )
-frame = 2
+frame = 3
 
 [node name="Stats" parent="YSort/Enemies/Bat" index="4"]
 level = 15
@@ -309,7 +305,7 @@ position = Vector2( 952, 488 )
 
 [node name="Sprite" parent="YSort/Enemies/Bat2" index="0"]
 material = SubResource( 11 )
-frame = 2
+frame = 3
 
 [node name="Stats" parent="YSort/Enemies/Bat2" index="4"]
 level = 15
@@ -319,7 +315,7 @@ position = Vector2( 1024, 424 )
 
 [node name="Sprite" parent="YSort/Enemies/Bat3" index="0"]
 material = SubResource( 12 )
-frame = 2
+frame = 3
 
 [node name="Stats" parent="YSort/Enemies/Bat3" index="4"]
 level = 13
@@ -329,7 +325,7 @@ position = Vector2( 1104, 424 )
 
 [node name="Sprite" parent="YSort/Enemies/Bat4" index="0"]
 material = SubResource( 13 )
-frame = 2
+frame = 3
 
 [node name="Stats" parent="YSort/Enemies/Bat4" index="4"]
 level = 16
@@ -339,7 +335,7 @@ position = Vector2( 1088, 504 )
 
 [node name="Sprite" parent="YSort/Enemies/Bat5" index="0"]
 material = SubResource( 14 )
-frame = 2
+frame = 3
 
 [node name="Stats" parent="YSort/Enemies/Bat5" index="4"]
 level = 9
@@ -352,7 +348,7 @@ position = Vector2( 960, 576 )
 
 [node name="Sprite" parent="YSort/Enemies/Bat6" index="0"]
 material = SubResource( 15 )
-frame = 2
+frame = 3
 
 [node name="Stats" parent="YSort/Enemies/Bat6" index="4"]
 level = 21
